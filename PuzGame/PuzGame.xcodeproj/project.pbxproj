@@ -1,0 +1,1271 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BF8398C65ED732385660A20 /* libPods-PuzGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21EC9E59CA2F65432BFEC602 /* libPods-PuzGame.a */; };
+		9DC1EFDA20FF3C9A002C7771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFD920FF3C9A002C7771 /* Images.xcassets */; };
+		9DC1EFDB20FF3C9A002C7771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFD920FF3C9A002C7771 /* Images.xcassets */; };
+		9DC1EFDD20FF3CA4002C7771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFDC20FF3CA4002C7771 /* Images.xcassets */; };
+		9DC1EFDE20FF3CA4002C7771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFDC20FF3CA4002C7771 /* Images.xcassets */; };
+		9DC1EFEA20FF4053002C7771 /* ColorsMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFE920FF4053002C7771 /* ColorsMap.plist */; };
+		9DC1EFEC20FF406D002C7771 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFEB20FF406D002C7771 /* images.xcassets */; };
+		9DC1EFED20FF406D002C7771 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFEB20FF406D002C7771 /* images.xcassets */; };
+		9DC1EFF020FF4183002C7771 /* PZGreen.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFE320FF402D002C7771 /* PZGreen.bundle */; };
+		9DC1EFF621001CAC002C7771 /* PZFullBackGroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1EFF521001CAC002C7771 /* PZFullBackGroundView.m */; };
+		9DC1EFFA21001CC8002C7771 /* UIView+PZImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1EFF921001CC8002C7771 /* UIView+PZImage.m */; };
+		9DC1EFFD210059F3002C7771 /* bg_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFFC210059F3002C7771 /* bg_music.mp3 */; };
+		9DD2130220FC38190036311D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2130120FC38190036311D /* AppDelegate.m */; };
+		9DD2130A20FC381A0036311D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2130920FC381A0036311D /* Assets.xcassets */; };
+		9DD2131020FC381A0036311D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2130F20FC381A0036311D /* main.m */; };
+		9DD2131A20FC381B0036311D /* PuzGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2131920FC381B0036311D /* PuzGameTests.m */; };
+		9DD2132520FC381B0036311D /* PuzGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2132420FC381B0036311D /* PuzGameUITests.m */; };
+		9DD2133420FC387F0036311D /* PZSoundToolManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2133320FC387F0036311D /* PZSoundToolManger.m */; };
+		9DD2133820FC44280036311D /* sound.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2133620FC44280036311D /* sound.bundle */; };
+		9DD2134020FC744C0036311D /* PZSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2133F20FC744C0036311D /* PZSetViewController.m */; };
+		9DD2134320FC75CF0036311D /* PZGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134220FC75CF0036311D /* PZGameViewController.m */; };
+		9DD2134620FC767C0036311D /* PZLanchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134520FC767C0036311D /* PZLanchViewController.m */; };
+		9DD2134920FC77880036311D /* PZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134820FC77880036311D /* PZNavigationController.m */; };
+		9DD2134C20FC81620036311D /* PZGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134B20FC81620036311D /* PZGameCell.m */; };
+		9DD2134F20FC8B8E0036311D /* PZPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134E20FC8B8E0036311D /* PZPlayViewController.m */; };
+		9DD2136220FC8C4C0036311D /* XWMaskItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2135120FC8C4C0036311D /* XWMaskItem.m */; };
+		9DD2136320FC8C4C0036311D /* XWCoachMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2135420FC8C4C0036311D /* XWCoachMask.m */; };
+		9DD2136420FC8C4C0036311D /* arrow-right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135620FC8C4C0036311D /* arrow-right@3x.png */; };
+		9DD2136520FC8C4C0036311D /* arrow-top.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135720FC8C4C0036311D /* arrow-top.png */; };
+		9DD2136620FC8C4C0036311D /* arrow-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135820FC8C4C0036311D /* arrow-right@2x.png */; };
+		9DD2136720FC8C4C0036311D /* arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135920FC8C4C0036311D /* arrow-right.png */; };
+		9DD2136820FC8C4C0036311D /* arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135A20FC8C4C0036311D /* arrow-down.png */; };
+		9DD2136920FC8C4C0036311D /* arrow-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135B20FC8C4C0036311D /* arrow-left.png */; };
+		9DD2136A20FC8C4C0036311D /* arrow-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135C20FC8C4C0036311D /* arrow-left@2x.png */; };
+		9DD2136B20FC8C4C0036311D /* arrow-top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135D20FC8C4C0036311D /* arrow-top@2x.png */; };
+		9DD2136C20FC8C4C0036311D /* arrow-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135E20FC8C4C0036311D /* arrow-down@2x.png */; };
+		9DD2136D20FC8C4C0036311D /* arrow-down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135F20FC8C4C0036311D /* arrow-down@3x.png */; };
+		9DD2136E20FC8C4C0036311D /* arrow-top@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2136020FC8C4C0036311D /* arrow-top@3x.png */; };
+		9DD2136F20FC8C4C0036311D /* arrow-left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2136120FC8C4C0036311D /* arrow-left@3x.png */; };
+		9DD2139220FD7AC40036311D /* PZStageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2139120FD7AC40036311D /* PZStageInfo.m */; };
+		9DD213AB20FD82480036311D /* PZBlack.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2139720FD800E0036311D /* PZBlack.bundle */; };
+		9DD213AC20FD82510036311D /* PZWhite.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DD213A120FD80330036311D /* PZWhite.bundle */; };
+		9DD213B020FD82D80036311D /* ColorsMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DD213AF20FD82D70036311D /* ColorsMap.plist */; };
+		9DD213B220FD82DE0036311D /* ColorsMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DD213B120FD82DE0036311D /* ColorsMap.plist */; };
+		9DD213B520FDD3B30036311D /* PZStageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213B420FDD3B30036311D /* PZStageManager.m */; };
+		9DD213BB20FEDDE40036311D /* PZSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213BA20FEDDE40036311D /* PZSetCell.m */; };
+		9DD213BE20FEDF280036311D /* UIFont+fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213BD20FEDF280036311D /* UIFont+fonts.m */; };
+		9DD213C120FEDF570036311D /* UIColor+SMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213C020FEDF570036311D /* UIColor+SMColor.m */; };
+		9DD213C420FEE7610036311D /* PZGameModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213C320FEE7610036311D /* PZGameModelController.m */; };
+		9DD213C820FEE8830036311D /* PZBackTypeVieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213C720FEE8830036311D /* PZBackTypeVieController.m */; };
+		9DD213CB20FF128B0036311D /* PZBaseVieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213CA20FF128B0036311D /* PZBaseVieController.m */; };
+		9DD213D020FF201C0036311D /* PZSnowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213CF20FF201C0036311D /* PZSnowAction.m */; };
+		9DD213D320FF21CB0036311D /* SMAuotherAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213D220FF21CB0036311D /* SMAuotherAction.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DC1EFEE20FF415F002C7771 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DD212F520FC38190036311D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DC1EFE220FF402D002C7771;
+			remoteInfo = PZGreen;
+		};
+		9DD2131620FC381B0036311D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DD212F520FC38190036311D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DD212FC20FC38190036311D;
+			remoteInfo = PuzGame;
+		};
+		9DD2132120FC381B0036311D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DD212F520FC38190036311D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DD212FC20FC38190036311D;
+			remoteInfo = PuzGame;
+		};
+		9DD213A720FD82340036311D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DD212F520FC38190036311D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DD2139620FD800E0036311D;
+			remoteInfo = PZBlack;
+		};
+		9DD213A920FD82380036311D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DD212F520FC38190036311D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DD213A020FD80330036311D;
+			remoteInfo = PZWhite;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21EC9E59CA2F65432BFEC602 /* libPods-PuzGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PuzGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		345C9D7F38AC57FA40C85E2B /* Pods-PuzGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuzGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-PuzGame/Pods-PuzGame.release.xcconfig"; sourceTree = "<group>"; };
+		8A0CBF681E3AE2E35DE8A222 /* Pods-PuzGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuzGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PuzGame/Pods-PuzGame.debug.xcconfig"; sourceTree = "<group>"; };
+		9DC1EFD920FF3C9A002C7771 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9DC1EFDC20FF3CA4002C7771 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9DC1EFE320FF402D002C7771 /* PZGreen.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PZGreen.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DC1EFE520FF402D002C7771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DC1EFE920FF4053002C7771 /* ColorsMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ColorsMap.plist; sourceTree = "<group>"; };
+		9DC1EFEB20FF406D002C7771 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		9DC1EFF421001CAC002C7771 /* PZFullBackGroundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZFullBackGroundView.h; sourceTree = "<group>"; };
+		9DC1EFF521001CAC002C7771 /* PZFullBackGroundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZFullBackGroundView.m; sourceTree = "<group>"; };
+		9DC1EFF821001CC8002C7771 /* UIView+PZImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+PZImage.h"; sourceTree = "<group>"; };
+		9DC1EFF921001CC8002C7771 /* UIView+PZImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+PZImage.m"; sourceTree = "<group>"; };
+		9DC1EFFC210059F3002C7771 /* bg_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg_music.mp3; sourceTree = "<group>"; };
+		9DD212FD20FC38190036311D /* PuzGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuzGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD2130020FC38190036311D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9DD2130120FC38190036311D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9DD2130920FC381A0036311D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DD2130E20FC381A0036311D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DD2130F20FC381A0036311D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9DD2131520FC381B0036311D /* PuzGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD2131920FC381B0036311D /* PuzGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PuzGameTests.m; sourceTree = "<group>"; };
+		9DD2131B20FC381B0036311D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DD2132020FC381B0036311D /* PuzGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD2132420FC381B0036311D /* PuzGameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PuzGameUITests.m; sourceTree = "<group>"; };
+		9DD2132620FC381B0036311D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DD2133220FC387F0036311D /* PZSoundToolManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZSoundToolManger.h; sourceTree = "<group>"; };
+		9DD2133320FC387F0036311D /* PZSoundToolManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZSoundToolManger.m; sourceTree = "<group>"; };
+		9DD2133620FC44280036311D /* sound.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = sound.bundle; sourceTree = "<group>"; };
+		9DD2133920FC44720036311D /* PZSoundHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZSoundHeader.h; sourceTree = "<group>"; };
+		9DD2133E20FC744C0036311D /* PZSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZSetViewController.h; sourceTree = "<group>"; };
+		9DD2133F20FC744C0036311D /* PZSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZSetViewController.m; sourceTree = "<group>"; };
+		9DD2134120FC75CF0036311D /* PZGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZGameViewController.h; sourceTree = "<group>"; };
+		9DD2134220FC75CF0036311D /* PZGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZGameViewController.m; sourceTree = "<group>"; };
+		9DD2134420FC767C0036311D /* PZLanchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZLanchViewController.h; sourceTree = "<group>"; };
+		9DD2134520FC767C0036311D /* PZLanchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZLanchViewController.m; sourceTree = "<group>"; };
+		9DD2134720FC77880036311D /* PZNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZNavigationController.h; sourceTree = "<group>"; };
+		9DD2134820FC77880036311D /* PZNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZNavigationController.m; sourceTree = "<group>"; };
+		9DD2134A20FC81620036311D /* PZGameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZGameCell.h; sourceTree = "<group>"; };
+		9DD2134B20FC81620036311D /* PZGameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZGameCell.m; sourceTree = "<group>"; };
+		9DD2134D20FC8B8E0036311D /* PZPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZPlayViewController.h; sourceTree = "<group>"; };
+		9DD2134E20FC8B8E0036311D /* PZPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZPlayViewController.m; sourceTree = "<group>"; };
+		9DD2135120FC8C4C0036311D /* XWMaskItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWMaskItem.m; sourceTree = "<group>"; };
+		9DD2135220FC8C4C0036311D /* XWCoachMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCoachMask.h; sourceTree = "<group>"; };
+		9DD2135320FC8C4C0036311D /* XWMaskItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWMaskItem.h; sourceTree = "<group>"; };
+		9DD2135420FC8C4C0036311D /* XWCoachMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWCoachMask.m; sourceTree = "<group>"; };
+		9DD2135620FC8C4C0036311D /* arrow-right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-right@3x.png"; sourceTree = "<group>"; };
+		9DD2135720FC8C4C0036311D /* arrow-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-top.png"; sourceTree = "<group>"; };
+		9DD2135820FC8C4C0036311D /* arrow-right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-right@2x.png"; sourceTree = "<group>"; };
+		9DD2135920FC8C4C0036311D /* arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-right.png"; sourceTree = "<group>"; };
+		9DD2135A20FC8C4C0036311D /* arrow-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-down.png"; sourceTree = "<group>"; };
+		9DD2135B20FC8C4C0036311D /* arrow-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-left.png"; sourceTree = "<group>"; };
+		9DD2135C20FC8C4C0036311D /* arrow-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-left@2x.png"; sourceTree = "<group>"; };
+		9DD2135D20FC8C4C0036311D /* arrow-top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-top@2x.png"; sourceTree = "<group>"; };
+		9DD2135E20FC8C4C0036311D /* arrow-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-down@2x.png"; sourceTree = "<group>"; };
+		9DD2135F20FC8C4C0036311D /* arrow-down@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-down@3x.png"; sourceTree = "<group>"; };
+		9DD2136020FC8C4C0036311D /* arrow-top@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-top@3x.png"; sourceTree = "<group>"; };
+		9DD2136120FC8C4C0036311D /* arrow-left@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-left@3x.png"; sourceTree = "<group>"; };
+		9DD2139020FD7AC40036311D /* PZStageInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZStageInfo.h; sourceTree = "<group>"; };
+		9DD2139120FD7AC40036311D /* PZStageInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZStageInfo.m; sourceTree = "<group>"; };
+		9DD2139720FD800E0036311D /* PZBlack.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PZBlack.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD2139920FD800E0036311D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DD213A120FD80330036311D /* PZWhite.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PZWhite.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD213A320FD80330036311D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DD213AF20FD82D70036311D /* ColorsMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ColorsMap.plist; sourceTree = "<group>"; };
+		9DD213B120FD82DE0036311D /* ColorsMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ColorsMap.plist; sourceTree = "<group>"; };
+		9DD213B320FDD3B30036311D /* PZStageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZStageManager.h; sourceTree = "<group>"; };
+		9DD213B420FDD3B30036311D /* PZStageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZStageManager.m; sourceTree = "<group>"; };
+		9DD213B920FEDDE40036311D /* PZSetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZSetCell.h; sourceTree = "<group>"; };
+		9DD213BA20FEDDE40036311D /* PZSetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZSetCell.m; sourceTree = "<group>"; };
+		9DD213BC20FEDF270036311D /* UIFont+fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+fonts.h"; sourceTree = "<group>"; };
+		9DD213BD20FEDF280036311D /* UIFont+fonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+fonts.m"; sourceTree = "<group>"; };
+		9DD213BF20FEDF570036311D /* UIColor+SMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SMColor.h"; sourceTree = "<group>"; };
+		9DD213C020FEDF570036311D /* UIColor+SMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SMColor.m"; sourceTree = "<group>"; };
+		9DD213C220FEE7610036311D /* PZGameModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZGameModelController.h; sourceTree = "<group>"; };
+		9DD213C320FEE7610036311D /* PZGameModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZGameModelController.m; sourceTree = "<group>"; };
+		9DD213C620FEE8830036311D /* PZBackTypeVieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZBackTypeVieController.h; sourceTree = "<group>"; };
+		9DD213C720FEE8830036311D /* PZBackTypeVieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZBackTypeVieController.m; sourceTree = "<group>"; };
+		9DD213C920FF128B0036311D /* PZBaseVieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZBaseVieController.h; sourceTree = "<group>"; };
+		9DD213CA20FF128B0036311D /* PZBaseVieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZBaseVieController.m; sourceTree = "<group>"; };
+		9DD213CE20FF201C0036311D /* PZSnowAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZSnowAction.h; sourceTree = "<group>"; };
+		9DD213CF20FF201C0036311D /* PZSnowAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZSnowAction.m; sourceTree = "<group>"; };
+		9DD213D120FF21CA0036311D /* SMAuotherAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAuotherAction.h; sourceTree = "<group>"; };
+		9DD213D220FF21CB0036311D /* SMAuotherAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAuotherAction.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DC1EFE020FF402D002C7771 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD212FA20FC38190036311D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BF8398C65ED732385660A20 /* libPods-PuzGame.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2131220FC381B0036311D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2131D20FC381B0036311D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2139420FD800E0036311D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2139E20FD80330036311D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67A02621F4102C5B00423AB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21EC9E59CA2F65432BFEC602 /* libPods-PuzGame.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B59082787FE28B61DB32650 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A0CBF681E3AE2E35DE8A222 /* Pods-PuzGame.debug.xcconfig */,
+				345C9D7F38AC57FA40C85E2B /* Pods-PuzGame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9DC1EFE420FF402D002C7771 /* PZGreen */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1EFE920FF4053002C7771 /* ColorsMap.plist */,
+				9DC1EFE520FF402D002C7771 /* Info.plist */,
+				9DC1EFEB20FF406D002C7771 /* images.xcassets */,
+			);
+			path = PZGreen;
+			sourceTree = "<group>";
+		};
+		9DD212F420FC38190036311D = {
+			isa = PBXGroup;
+			children = (
+				9DD212FF20FC38190036311D /* PuzGame */,
+				9DD2131820FC381B0036311D /* PuzGameTests */,
+				9DD2132320FC381B0036311D /* PuzGameUITests */,
+				9DD2139820FD800E0036311D /* PZBlack */,
+				9DD213A220FD80330036311D /* PZWhite */,
+				9DC1EFE420FF402D002C7771 /* PZGreen */,
+				9DD212FE20FC38190036311D /* Products */,
+				9B59082787FE28B61DB32650 /* Pods */,
+				67A02621F4102C5B00423AB2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9DD212FE20FC38190036311D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DD212FD20FC38190036311D /* PuzGame.app */,
+				9DD2131520FC381B0036311D /* PuzGameTests.xctest */,
+				9DD2132020FC381B0036311D /* PuzGameUITests.xctest */,
+				9DD2139720FD800E0036311D /* PZBlack.bundle */,
+				9DD213A120FD80330036311D /* PZWhite.bundle */,
+				9DC1EFE320FF402D002C7771 /* PZGreen.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DD212FF20FC38190036311D /* PuzGame */ = {
+			isa = PBXGroup;
+			children = (
+				9DD2133B20FC726C0036311D /* Classess */,
+				9DD2133A20FC72580036311D /* Source */,
+				9DD2130020FC38190036311D /* AppDelegate.h */,
+				9DD2130120FC38190036311D /* AppDelegate.m */,
+				9DD2130920FC381A0036311D /* Assets.xcassets */,
+				9DD2130E20FC381A0036311D /* Info.plist */,
+				9DD2130F20FC381A0036311D /* main.m */,
+			);
+			path = PuzGame;
+			sourceTree = "<group>";
+		};
+		9DD2131820FC381B0036311D /* PuzGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DD2131920FC381B0036311D /* PuzGameTests.m */,
+				9DD2131B20FC381B0036311D /* Info.plist */,
+			);
+			path = PuzGameTests;
+			sourceTree = "<group>";
+		};
+		9DD2132320FC381B0036311D /* PuzGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9DD2132420FC381B0036311D /* PuzGameUITests.m */,
+				9DD2132620FC381B0036311D /* Info.plist */,
+			);
+			path = PuzGameUITests;
+			sourceTree = "<group>";
+		};
+		9DD2133A20FC72580036311D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1EFFC210059F3002C7771 /* bg_music.mp3 */,
+				9DD2133620FC44280036311D /* sound.bundle */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		9DD2133B20FC726C0036311D /* Classess */ = {
+			isa = PBXGroup;
+			children = (
+				9DD2135020FC8C4C0036311D /* XWCoachMask */,
+				9DD2133D20FC72CF0036311D /* Main */,
+				9DD2133C20FC72CF0036311D /* Tools */,
+			);
+			path = Classess;
+			sourceTree = "<group>";
+		};
+		9DD2133C20FC72CF0036311D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				9DD2133220FC387F0036311D /* PZSoundToolManger.h */,
+				9DD2133320FC387F0036311D /* PZSoundToolManger.m */,
+				9DD2133920FC44720036311D /* PZSoundHeader.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		9DD2133D20FC72CF0036311D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9DD213CD20FF13B80036311D /* Other */,
+				9DD213CC20FF13A20036311D /* catrogy */,
+				9DD213C520FEE7B40036311D /* PZSet */,
+				9DD2134120FC75CF0036311D /* PZGameViewController.h */,
+				9DD2134220FC75CF0036311D /* PZGameViewController.m */,
+				9DD2134420FC767C0036311D /* PZLanchViewController.h */,
+				9DD2134520FC767C0036311D /* PZLanchViewController.m */,
+				9DD2134720FC77880036311D /* PZNavigationController.h */,
+				9DD2134820FC77880036311D /* PZNavigationController.m */,
+				9DD2134D20FC8B8E0036311D /* PZPlayViewController.h */,
+				9DD2134E20FC8B8E0036311D /* PZPlayViewController.m */,
+				9DD213C920FF128B0036311D /* PZBaseVieController.h */,
+				9DD213CA20FF128B0036311D /* PZBaseVieController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9DD2135020FC8C4C0036311D /* XWCoachMask */ = {
+			isa = PBXGroup;
+			children = (
+				9DD2135120FC8C4C0036311D /* XWMaskItem.m */,
+				9DD2135220FC8C4C0036311D /* XWCoachMask.h */,
+				9DD2135320FC8C4C0036311D /* XWMaskItem.h */,
+				9DD2135420FC8C4C0036311D /* XWCoachMask.m */,
+				9DD2135520FC8C4C0036311D /* Resource */,
+			);
+			path = XWCoachMask;
+			sourceTree = "<group>";
+		};
+		9DD2135520FC8C4C0036311D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9DD2135620FC8C4C0036311D /* arrow-right@3x.png */,
+				9DD2135720FC8C4C0036311D /* arrow-top.png */,
+				9DD2135820FC8C4C0036311D /* arrow-right@2x.png */,
+				9DD2135920FC8C4C0036311D /* arrow-right.png */,
+				9DD2135A20FC8C4C0036311D /* arrow-down.png */,
+				9DD2135B20FC8C4C0036311D /* arrow-left.png */,
+				9DD2135C20FC8C4C0036311D /* arrow-left@2x.png */,
+				9DD2135D20FC8C4C0036311D /* arrow-top@2x.png */,
+				9DD2135E20FC8C4C0036311D /* arrow-down@2x.png */,
+				9DD2135F20FC8C4C0036311D /* arrow-down@3x.png */,
+				9DD2136020FC8C4C0036311D /* arrow-top@3x.png */,
+				9DD2136120FC8C4C0036311D /* arrow-left@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9DD2139820FD800E0036311D /* PZBlack */ = {
+			isa = PBXGroup;
+			children = (
+				9DD213AF20FD82D70036311D /* ColorsMap.plist */,
+				9DD2139920FD800E0036311D /* Info.plist */,
+				9DC1EFDC20FF3CA4002C7771 /* Images.xcassets */,
+			);
+			path = PZBlack;
+			sourceTree = "<group>";
+		};
+		9DD213A220FD80330036311D /* PZWhite */ = {
+			isa = PBXGroup;
+			children = (
+				9DD213B120FD82DE0036311D /* ColorsMap.plist */,
+				9DD213A320FD80330036311D /* Info.plist */,
+				9DC1EFD920FF3C9A002C7771 /* Images.xcassets */,
+			);
+			path = PZWhite;
+			sourceTree = "<group>";
+		};
+		9DD213C520FEE7B40036311D /* PZSet */ = {
+			isa = PBXGroup;
+			children = (
+				9DD213B920FEDDE40036311D /* PZSetCell.h */,
+				9DD213BA20FEDDE40036311D /* PZSetCell.m */,
+				9DD213C220FEE7610036311D /* PZGameModelController.h */,
+				9DD213C320FEE7610036311D /* PZGameModelController.m */,
+				9DD2133E20FC744C0036311D /* PZSetViewController.h */,
+				9DD2133F20FC744C0036311D /* PZSetViewController.m */,
+				9DD213C620FEE8830036311D /* PZBackTypeVieController.h */,
+				9DD213C720FEE8830036311D /* PZBackTypeVieController.m */,
+			);
+			path = PZSet;
+			sourceTree = "<group>";
+		};
+		9DD213CC20FF13A20036311D /* catrogy */ = {
+			isa = PBXGroup;
+			children = (
+				9DD213BF20FEDF570036311D /* UIColor+SMColor.h */,
+				9DD213C020FEDF570036311D /* UIColor+SMColor.m */,
+				9DD213BC20FEDF270036311D /* UIFont+fonts.h */,
+				9DD213BD20FEDF280036311D /* UIFont+fonts.m */,
+			);
+			path = catrogy;
+			sourceTree = "<group>";
+		};
+		9DD213CD20FF13B80036311D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9DD213D120FF21CA0036311D /* SMAuotherAction.h */,
+				9DD213D220FF21CB0036311D /* SMAuotherAction.m */,
+				9DD2134A20FC81620036311D /* PZGameCell.h */,
+				9DD2134B20FC81620036311D /* PZGameCell.m */,
+				9DD2139020FD7AC40036311D /* PZStageInfo.h */,
+				9DD2139120FD7AC40036311D /* PZStageInfo.m */,
+				9DD213B320FDD3B30036311D /* PZStageManager.h */,
+				9DD213B420FDD3B30036311D /* PZStageManager.m */,
+				9DD213CE20FF201C0036311D /* PZSnowAction.h */,
+				9DD213CF20FF201C0036311D /* PZSnowAction.m */,
+				9DC1EFF421001CAC002C7771 /* PZFullBackGroundView.h */,
+				9DC1EFF521001CAC002C7771 /* PZFullBackGroundView.m */,
+				9DC1EFF821001CC8002C7771 /* UIView+PZImage.h */,
+				9DC1EFF921001CC8002C7771 /* UIView+PZImage.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9DC1EFE220FF402D002C7771 /* PZGreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DC1EFE620FF402D002C7771 /* Build configuration list for PBXNativeTarget "PZGreen" */;
+			buildPhases = (
+				9DC1EFDF20FF402D002C7771 /* Sources */,
+				9DC1EFE020FF402D002C7771 /* Frameworks */,
+				9DC1EFE120FF402D002C7771 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PZGreen;
+			productName = PZGreen;
+			productReference = 9DC1EFE320FF402D002C7771 /* PZGreen.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		9DD212FC20FC38190036311D /* PuzGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DD2132920FC381B0036311D /* Build configuration list for PBXNativeTarget "PuzGame" */;
+			buildPhases = (
+				A15255665E004EE8A52104EC /* [CP] Check Pods Manifest.lock */,
+				9DD212F920FC38190036311D /* Sources */,
+				9DD212FA20FC38190036311D /* Frameworks */,
+				9DD212FB20FC38190036311D /* Resources */,
+				A33ADDF75DC3EFDBBEE251E9 /* [CP] Embed Pods Frameworks */,
+				0F17D22079B95F3917CEB3E0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DC1EFEF20FF415F002C7771 /* PBXTargetDependency */,
+				9DD213AA20FD82380036311D /* PBXTargetDependency */,
+				9DD213A820FD82340036311D /* PBXTargetDependency */,
+			);
+			name = PuzGame;
+			productName = PuzGame;
+			productReference = 9DD212FD20FC38190036311D /* PuzGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9DD2131420FC381B0036311D /* PuzGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DD2132C20FC381B0036311D /* Build configuration list for PBXNativeTarget "PuzGameTests" */;
+			buildPhases = (
+				9DD2131120FC381B0036311D /* Sources */,
+				9DD2131220FC381B0036311D /* Frameworks */,
+				9DD2131320FC381B0036311D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DD2131720FC381B0036311D /* PBXTargetDependency */,
+			);
+			name = PuzGameTests;
+			productName = PuzGameTests;
+			productReference = 9DD2131520FC381B0036311D /* PuzGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9DD2131F20FC381B0036311D /* PuzGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DD2132F20FC381B0036311D /* Build configuration list for PBXNativeTarget "PuzGameUITests" */;
+			buildPhases = (
+				9DD2131C20FC381B0036311D /* Sources */,
+				9DD2131D20FC381B0036311D /* Frameworks */,
+				9DD2131E20FC381B0036311D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DD2132220FC381B0036311D /* PBXTargetDependency */,
+			);
+			name = PuzGameUITests;
+			productName = PuzGameUITests;
+			productReference = 9DD2132020FC381B0036311D /* PuzGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9DD2139620FD800E0036311D /* PZBlack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DD2139A20FD800E0036311D /* Build configuration list for PBXNativeTarget "PZBlack" */;
+			buildPhases = (
+				9DD2139320FD800E0036311D /* Sources */,
+				9DD2139420FD800E0036311D /* Frameworks */,
+				9DD2139520FD800E0036311D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PZBlack;
+			productName = PZBlack;
+			productReference = 9DD2139720FD800E0036311D /* PZBlack.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		9DD213A020FD80330036311D /* PZWhite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DD213A420FD80330036311D /* Build configuration list for PBXNativeTarget "PZWhite" */;
+			buildPhases = (
+				9DD2139D20FD80330036311D /* Sources */,
+				9DD2139E20FD80330036311D /* Frameworks */,
+				9DD2139F20FD80330036311D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PZWhite;
+			productName = PZWhite;
+			productReference = 9DD213A120FD80330036311D /* PZWhite.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DD212F520FC38190036311D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = hww;
+				TargetAttributes = {
+					9DC1EFE220FF402D002C7771 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+					9DD212FC20FC38190036311D = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+					9DD2131420FC381B0036311D = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9DD212FC20FC38190036311D;
+					};
+					9DD2131F20FC381B0036311D = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9DD212FC20FC38190036311D;
+					};
+					9DD2139620FD800E0036311D = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+					9DD213A020FD80330036311D = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9DD212F820FC38190036311D /* Build configuration list for PBXProject "PuzGame" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9DD212F420FC38190036311D;
+			productRefGroup = 9DD212FE20FC38190036311D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DD212FC20FC38190036311D /* PuzGame */,
+				9DD2131420FC381B0036311D /* PuzGameTests */,
+				9DD2131F20FC381B0036311D /* PuzGameUITests */,
+				9DD2139620FD800E0036311D /* PZBlack */,
+				9DD213A020FD80330036311D /* PZWhite */,
+				9DC1EFE220FF402D002C7771 /* PZGreen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DC1EFE120FF402D002C7771 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DC1EFEA20FF4053002C7771 /* ColorsMap.plist in Resources */,
+				9DC1EFED20FF406D002C7771 /* images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD212FB20FC38190036311D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DC1EFF020FF4183002C7771 /* PZGreen.bundle in Resources */,
+				9DD213AC20FD82510036311D /* PZWhite.bundle in Resources */,
+				9DC1EFDD20FF3CA4002C7771 /* Images.xcassets in Resources */,
+				9DD213AB20FD82480036311D /* PZBlack.bundle in Resources */,
+				9DD2136720FC8C4C0036311D /* arrow-right.png in Resources */,
+				9DC1EFFD210059F3002C7771 /* bg_music.mp3 in Resources */,
+				9DD2136620FC8C4C0036311D /* arrow-right@2x.png in Resources */,
+				9DD2136F20FC8C4C0036311D /* arrow-left@3x.png in Resources */,
+				9DD2136C20FC8C4C0036311D /* arrow-down@2x.png in Resources */,
+				9DD2136820FC8C4C0036311D /* arrow-down.png in Resources */,
+				9DD2136B20FC8C4C0036311D /* arrow-top@2x.png in Resources */,
+				9DD2136420FC8C4C0036311D /* arrow-right@3x.png in Resources */,
+				9DD2136A20FC8C4C0036311D /* arrow-left@2x.png in Resources */,
+				9DD2130A20FC381A0036311D /* Assets.xcassets in Resources */,
+				9DD2133820FC44280036311D /* sound.bundle in Resources */,
+				9DD2136E20FC8C4C0036311D /* arrow-top@3x.png in Resources */,
+				9DC1EFEC20FF406D002C7771 /* images.xcassets in Resources */,
+				9DC1EFDA20FF3C9A002C7771 /* Images.xcassets in Resources */,
+				9DD2136D20FC8C4C0036311D /* arrow-down@3x.png in Resources */,
+				9DD2136920FC8C4C0036311D /* arrow-left.png in Resources */,
+				9DD2136520FC8C4C0036311D /* arrow-top.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2131320FC381B0036311D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2131E20FC381B0036311D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2139520FD800E0036311D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DD213B020FD82D80036311D /* ColorsMap.plist in Resources */,
+				9DC1EFDE20FF3CA4002C7771 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2139F20FD80330036311D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DD213B220FD82DE0036311D /* ColorsMap.plist in Resources */,
+				9DC1EFDB20FF3C9A002C7771 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F17D22079B95F3917CEB3E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PuzGame/Pods-PuzGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A15255665E004EE8A52104EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PuzGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A33ADDF75DC3EFDBBEE251E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PuzGame/Pods-PuzGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9DC1EFDF20FF402D002C7771 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD212F920FC38190036311D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DD2134320FC75CF0036311D /* PZGameViewController.m in Sources */,
+				9DD213B520FDD3B30036311D /* PZStageManager.m in Sources */,
+				9DD2134920FC77880036311D /* PZNavigationController.m in Sources */,
+				9DD213C120FEDF570036311D /* UIColor+SMColor.m in Sources */,
+				9DD213D020FF201C0036311D /* PZSnowAction.m in Sources */,
+				9DD2134020FC744C0036311D /* PZSetViewController.m in Sources */,
+				9DD213BB20FEDDE40036311D /* PZSetCell.m in Sources */,
+				9DD2133420FC387F0036311D /* PZSoundToolManger.m in Sources */,
+				9DD2134620FC767C0036311D /* PZLanchViewController.m in Sources */,
+				9DD2134F20FC8B8E0036311D /* PZPlayViewController.m in Sources */,
+				9DD213CB20FF128B0036311D /* PZBaseVieController.m in Sources */,
+				9DD213C820FEE8830036311D /* PZBackTypeVieController.m in Sources */,
+				9DD213BE20FEDF280036311D /* UIFont+fonts.m in Sources */,
+				9DC1EFF621001CAC002C7771 /* PZFullBackGroundView.m in Sources */,
+				9DD2139220FD7AC40036311D /* PZStageInfo.m in Sources */,
+				9DC1EFFA21001CC8002C7771 /* UIView+PZImage.m in Sources */,
+				9DD2136220FC8C4C0036311D /* XWMaskItem.m in Sources */,
+				9DD213C420FEE7610036311D /* PZGameModelController.m in Sources */,
+				9DD213D320FF21CB0036311D /* SMAuotherAction.m in Sources */,
+				9DD2131020FC381A0036311D /* main.m in Sources */,
+				9DD2136320FC8C4C0036311D /* XWCoachMask.m in Sources */,
+				9DD2130220FC38190036311D /* AppDelegate.m in Sources */,
+				9DD2134C20FC81620036311D /* PZGameCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2131120FC381B0036311D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DD2131A20FC381B0036311D /* PuzGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2131C20FC381B0036311D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DD2132520FC381B0036311D /* PuzGameUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2139320FD800E0036311D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD2139D20FD80330036311D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DC1EFEF20FF415F002C7771 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DC1EFE220FF402D002C7771 /* PZGreen */;
+			targetProxy = 9DC1EFEE20FF415F002C7771 /* PBXContainerItemProxy */;
+		};
+		9DD2131720FC381B0036311D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DD212FC20FC38190036311D /* PuzGame */;
+			targetProxy = 9DD2131620FC381B0036311D /* PBXContainerItemProxy */;
+		};
+		9DD2132220FC381B0036311D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DD212FC20FC38190036311D /* PuzGame */;
+			targetProxy = 9DD2132120FC381B0036311D /* PBXContainerItemProxy */;
+		};
+		9DD213A820FD82340036311D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DD2139620FD800E0036311D /* PZBlack */;
+			targetProxy = 9DD213A720FD82340036311D /* PBXContainerItemProxy */;
+		};
+		9DD213AA20FD82380036311D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DD213A020FD80330036311D /* PZWhite */;
+			targetProxy = 9DD213A920FD82380036311D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9DC1EFE720FF402D002C7771 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PZGreen/Info.plist;
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = www.PZGreen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos11.4;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		9DC1EFE820FF402D002C7771 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PZGreen/Info.plist;
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = www.PZGreen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos11.4;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		9DD2132720FC381B0036311D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9DD2132820FC381B0036311D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9DD2132A20FC381B0036311D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A0CBF681E3AE2E35DE8A222 /* Pods-PuzGame.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				INFOPLIST_FILE = PuzGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hww.wljy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
+			};
+			name = Debug;
+		};
+		9DD2132B20FC381B0036311D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 345C9D7F38AC57FA40C85E2B /* Pods-PuzGame.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				INFOPLIST_FILE = PuzGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hww.wljy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
+			};
+			name = Release;
+		};
+		9DD2132D20FC381B0036311D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				INFOPLIST_FILE = PuzGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = www.PuzGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PuzGame.app/PuzGame";
+			};
+			name = Debug;
+		};
+		9DD2132E20FC381B0036311D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				INFOPLIST_FILE = PuzGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = www.PuzGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PuzGame.app/PuzGame";
+			};
+			name = Release;
+		};
+		9DD2133020FC381B0036311D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				INFOPLIST_FILE = PuzGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = www.PuzGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PuzGame;
+			};
+			name = Debug;
+		};
+		9DD2133120FC381B0036311D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				INFOPLIST_FILE = PuzGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = www.PuzGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PuzGame;
+			};
+			name = Release;
+		};
+		9DD2139B20FD800E0036311D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PZBlack/Info.plist;
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = www.PZBlack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos11.4;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		9DD2139C20FD800E0036311D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PZBlack/Info.plist;
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = www.PZBlack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos11.4;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		9DD213A520FD80330036311D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PZWhite/Info.plist;
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = www.PZWhite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos11.4;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		9DD213A620FD80330036311D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PZWhite/Info.plist;
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = www.PZWhite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos11.4;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DC1EFE620FF402D002C7771 /* Build configuration list for PBXNativeTarget "PZGreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DC1EFE720FF402D002C7771 /* Debug */,
+				9DC1EFE820FF402D002C7771 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DD212F820FC38190036311D /* Build configuration list for PBXProject "PuzGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DD2132720FC381B0036311D /* Debug */,
+				9DD2132820FC381B0036311D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DD2132920FC381B0036311D /* Build configuration list for PBXNativeTarget "PuzGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DD2132A20FC381B0036311D /* Debug */,
+				9DD2132B20FC381B0036311D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DD2132C20FC381B0036311D /* Build configuration list for PBXNativeTarget "PuzGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DD2132D20FC381B0036311D /* Debug */,
+				9DD2132E20FC381B0036311D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DD2132F20FC381B0036311D /* Build configuration list for PBXNativeTarget "PuzGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DD2133020FC381B0036311D /* Debug */,
+				9DD2133120FC381B0036311D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DD2139A20FD800E0036311D /* Build configuration list for PBXNativeTarget "PZBlack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DD2139B20FD800E0036311D /* Debug */,
+				9DD2139C20FD800E0036311D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DD213A420FD80330036311D /* Build configuration list for PBXNativeTarget "PZWhite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DD213A520FD80330036311D /* Debug */,
+				9DD213A620FD80330036311D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DD212F520FC38190036311D /* Project object */;
+}

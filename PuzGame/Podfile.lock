@@ -1,0 +1,29 @@
+PODS:
+  - Bugly (2.5.0)
+  - Masonry (1.1.0)
+  - MJExtension (3.0.15.1)
+  - MLTransition (2.1.3)
+  - SDTheme (0.1.0):
+    - SDTheme/Core (= 0.1.0)
+    - SDTheme/UIKit (= 0.1.0)
+  - SDTheme/Core (0.1.0)
+  - SDTheme/UIKit (0.1.0):
+    - SDTheme/Core
+
+DEPENDENCIES:
+  - Bugly
+  - Masonry
+  - MJExtension (~> 3.0.15.1)
+  - MLTransition (~> 2.1.2)
+  - SDTheme
+
+SPEC CHECKSUMS:
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  MLTransition: 8ebe393aedfb61507202085a5bb16c7b17363e43
+  SDTheme: e3ef7c084953a742d1750ef70374a16f322e6e2e
+
+PODFILE CHECKSUM: fd3e4da4c63c0fe8f4daa4d3638f4fbe3239327a
+
+COCOAPODS: 1.4.0.beta.1
