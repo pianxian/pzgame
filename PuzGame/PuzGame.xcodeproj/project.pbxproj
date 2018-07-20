@@ -27,6 +27,7 @@
 		9DC1F02B21017934002C7771 /* UIView+PZImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F02821017933002C7771 /* UIView+PZImage.m */; };
 		9DC1F02C21017934002C7771 /* UIColor+SMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F02921017933002C7771 /* UIColor+SMColor.m */; };
 		9DC1F02D21017934002C7771 /* UIFont+fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F02A21017933002C7771 /* UIFont+fonts.m */; };
+		9DC1F03221017DE0002C7771 /* PZAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F03121017DE0002C7771 /* PZAlertManager.m */; };
 		9DD2130220FC38190036311D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2130120FC38190036311D /* AppDelegate.m */; };
 		9DD2130A20FC381A0036311D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2130920FC381A0036311D /* Assets.xcassets */; };
 		9DD2131020FC381A0036311D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2130F20FC381A0036311D /* main.m */; };
@@ -135,6 +136,8 @@
 		9DC1F02A21017933002C7771 /* UIFont+fonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+fonts.m"; sourceTree = "<group>"; };
 		9DC1F02E21017944002C7771 /* PZCategoryHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZCategoryHeader.h; sourceTree = "<group>"; };
 		9DC1F02F21017958002C7771 /* PZPublicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZPublicHeader.h; sourceTree = "<group>"; };
+		9DC1F03021017DE0002C7771 /* PZAlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZAlertManager.h; sourceTree = "<group>"; };
+		9DC1F03121017DE0002C7771 /* PZAlertManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZAlertManager.m; sourceTree = "<group>"; };
 		9DD212FD20FC38190036311D /* PuzGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuzGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD2130020FC38190036311D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9DD2130120FC38190036311D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -366,9 +369,9 @@
 				9DC1F02521017933002C7771 /* UIColor+SMColor.h */,
 				9DC1F02621017933002C7771 /* UIView+PZImage.h */,
 				9DC1F02721017933002C7771 /* UIFont+fonts.h */,
+				9DC1F02A21017933002C7771 /* UIFont+fonts.m */,
 				9DC1F02821017933002C7771 /* UIView+PZImage.m */,
 				9DC1F02921017933002C7771 /* UIColor+SMColor.m */,
-				9DC1F02A21017933002C7771 /* UIFont+fonts.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -550,6 +553,8 @@
 				9DD213CF20FF201C0036311D /* PZSnowAction.m */,
 				9DC1EFF421001CAC002C7771 /* PZFullBackGroundView.h */,
 				9DC1EFF521001CAC002C7771 /* PZFullBackGroundView.m */,
+				9DC1F03021017DE0002C7771 /* PZAlertManager.h */,
+				9DC1F03121017DE0002C7771 /* PZAlertManager.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -880,6 +885,7 @@
 				9DD2136220FC8C4C0036311D /* XWMaskItem.m in Sources */,
 				9DD213C420FEE7610036311D /* PZGameModelController.m in Sources */,
 				9DC1F01E2101723B002C7771 /* PZGameCell.m in Sources */,
+				9DC1F03221017DE0002C7771 /* PZAlertManager.m in Sources */,
 				9DC1F01C2101723B002C7771 /* PZGameViewController.m in Sources */,
 				9DD213D320FF21CB0036311D /* SMAuotherAction.m in Sources */,
 				9DC1F01B2101723B002C7771 /* PZPlayViewController.m in Sources */,

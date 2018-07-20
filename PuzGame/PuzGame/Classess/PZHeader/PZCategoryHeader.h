@@ -8,6 +8,6 @@
 
 #ifndef PZCategoryHeader_h
 #define PZCategoryHeader_h
-
+#import "PZAlertManager.h"
 
 #endif /* PZCategoryHeader_h */

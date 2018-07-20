@@ -226,7 +226,7 @@ static NSString *FooterView = @"FooterView";
                     }];
                 }
             }else{
-                [self alertWithTitle:@"设备不支持相机" message:nil actionTitle:@"确定" inControl:self action:^{
+                [[PZAlertManager shareManager] alertWithTitle:@"设备不支持相机" message:nil actionTitle:@"确定" inControl:self action:^{
                     
                 }];
             }
@@ -253,7 +253,7 @@ static NSString *FooterView = @"FooterView";
                     [self presentToCamera:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
                 }
             }else{
-                [self alertWithTitle:@"此设备不支持照片图库" message:nil actionTitle:@"确定" inControl:self action:^{
+                [[PZAlertManager shareManager] alertWithTitle:@"此设备不支持照片图库" message:nil actionTitle:@"确定" inControl:self action:^{
                     
                 }];
             }
@@ -264,7 +264,7 @@ static NSString *FooterView = @"FooterView";
 }
 - (void)AlbumDeniedTosetWithTitle:(NSString *)title{
     
-    [self alertWithTitle:[NSString stringWithFormat:@"您未允许Easy拼图访问您的%@",title] message:@"是否去设置？" actionTitle:@"去设置" inControl:self action:^{
+    [[PZAlertManager shareManager] alertWithTitle:[NSString stringWithFormat:@"您未允许Easy拼图访问您的%@",title] message:@"是否去设置？" actionTitle:@"去设置" inControl:self action:^{
         if( [[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]] ) {
             if (@available(iOS 10.0, *)) {
                 [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{}completionHandler:^(BOOL        success) {
@@ -274,14 +274,6 @@ static NSString *FooterView = @"FooterView";
             }
         }
     }];
-}
--(void)alertWithTitle:(NSString *)title message:(NSString *)message actionTitle:(NSString *)actionTitle inControl:(UIViewController *)controller action:(void (^)(void))handler{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *actionAction = [UIAlertAction actionWithTitle:actionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        handler();
-    }];
-    [alert addAction:actionAction];
-    [controller presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)presentToCamera:(UIImagePickerControllerSourceType)sourceType{

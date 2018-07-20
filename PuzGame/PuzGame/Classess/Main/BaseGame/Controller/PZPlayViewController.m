@@ -62,29 +62,26 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    flakeLayer = [PZSnowAction snowShowWithlayerSize:CGSizeMake(self.view.bounds.size.width * 2.0, 0.0)];
-    _bestRecord = [[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"%@%@",kPzBestRecordKey,self.pzImageName]];
-    if (_bestRecord != INT_MAX) {
-        self.bestRecordLabel.text = [NSString stringWithFormat:@"你的最佳记录:%ld步",(long)_bestRecord];
-    }
-
-    _stepCount = 0;
-    _sound = 1104;
-    //    _difficulty = 3;
-    _puzzleCount = _difficulty *_difficulty;
-    _showBgImg = YES;
-//    self.puzzlebgImg = self;
-
+    [self intilizaData];
     [self cutPuzzleImg:[self checkWithImg:self.puzzlebgImg]];
     self.randNums = nil;
     [self.randNums addObjectsFromArray:[self getRandNums]];
     [self creatUI];
 }
+- (void)intilizaData{
+    _bestRecord = [[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"%@%@",kPzBestRecordKey,self.pzImageName]];
+    if (_bestRecord != INT_MAX) {
+        self.bestRecordLabel.text = [NSString stringWithFormat:@"你的最佳记录:%ld步",(long)_bestRecord];
+    }
+    _stepCount = 0;
+    _sound = 1104;
+    _puzzleCount = _difficulty *_difficulty;
+    _showBgImg = YES;
+}
 -(void)creatUI{
+    flakeLayer = [PZSnowAction snowShowWithlayerSize:CGSizeMake(self.view.bounds.size.width * 2.0, 0.0)];
     
     UIButton *restBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-  
     [restBtn setTitle:@"重置" forState:UIControlStateNormal];
     [restBtn theme_setTitleColor:@"text_h1" forState:UIControlStateNormal];
     restBtn.titleLabel.font = [UIFont systemFontOfSize:17];
@@ -109,9 +106,6 @@
     [self.view addSubview:_referImagV];
     _puzzleBgView = [[UIView alloc] initWithFrame:CGRectMake(pzBgViewX, pzBgViewY, pzBgViewW, pzBgViewH)];
     _puzzleBgView.backgroundColor = [UIColor colorWithHexColorString:@"#999999" andAlpha:1.0];
-    _puzzleBgView.layer.shadowColor = [UIColor colorWithHexColorString:@"#333333" andAlpha:1.0].CGColor;
-    _puzzleBgView.layer.borderColor = [UIColor colorWithHexColorString:@"#666666" andAlpha:1.0].CGColor;
-    _puzzleBgView.layer.borderWidth = 0.5;
     [self.view addSubview:_puzzleBgView];
     
     _stepLabel  = [[UILabel alloc] init];
@@ -133,7 +127,6 @@
         make.top.equalTo(self->_referImagV.mas_top).offset(0);
         make.right.equalTo(@-15);
     }];
-    
     
     CGFloat pzBtnX = 0;
     CGFloat pzBtnY = 0;
@@ -275,23 +268,13 @@
         [[NSUserDefaults standardUserDefaults] setInteger:_stepCount forKey:[NSString stringWithFormat:@"%@%@",kPzBestRecordKey,self.pzImageName]];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [self.view.layer addSublayer:flakeLayer];
-        [self alertWithTitle:@"恭喜你过关啦" message:@"" actionTitle:@"" inControl:self action:^{
+        [[PZAlertManager shareManager] alertWithTitle:@"恭喜你过关啦" message:@"" actionTitle:@"" inControl:self action:^{
             
         }];
+        
     }
 }
--(void)alertWithTitle:(NSString *)title message:(NSString *)message actionTitle:(NSString *)actionTitle inControl:(UIViewController *)controller action:(void (^)(void))handler{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-//    UIAlertAction *actionCancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-//
-//    }];
-    UIAlertAction *actionAction = [UIAlertAction actionWithTitle:actionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        handler();
-    }];
-//    [alert addAction:actionCancle];
-    [alert addAction:actionAction];
-    [controller presentViewController:alert animated:YES completion:nil];
-}
+
 -(NSArray *)getRandNums{
     int pzCount = 0;
     while (1) {
@@ -323,7 +306,6 @@
                 }
             }
         }
-        
         if (!(pzCount %2)) {//对2求余，余0，逆序数为偶数，即偶排列；否则，为奇排列
             return randNums;
         }
@@ -353,12 +335,9 @@
         }
         i++;
     }
-    
-    
 }
 
 - (void)refreshAction:(UIButton *)sender {
-    
     _stepCount = 0;
     self.stepLabel.text = @"0";
     
