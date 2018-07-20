@@ -28,13 +28,13 @@
 		9DC1F02C21017934002C7771 /* UIColor+SMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F02921017933002C7771 /* UIColor+SMColor.m */; };
 		9DC1F02D21017934002C7771 /* UIFont+fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F02A21017933002C7771 /* UIFont+fonts.m */; };
 		9DC1F03221017DE0002C7771 /* PZAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F03121017DE0002C7771 /* PZAlertManager.m */; };
+		9DC1F03421018340002C7771 /* sound.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1F03321018340002C7771 /* sound.bundle */; };
 		9DD2130220FC38190036311D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2130120FC38190036311D /* AppDelegate.m */; };
 		9DD2130A20FC381A0036311D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2130920FC381A0036311D /* Assets.xcassets */; };
 		9DD2131020FC381A0036311D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2130F20FC381A0036311D /* main.m */; };
 		9DD2131A20FC381B0036311D /* PuzGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2131920FC381B0036311D /* PuzGameTests.m */; };
 		9DD2132520FC381B0036311D /* PuzGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2132420FC381B0036311D /* PuzGameUITests.m */; };
 		9DD2133420FC387F0036311D /* PZSoundToolManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2133320FC387F0036311D /* PZSoundToolManger.m */; };
-		9DD2133820FC44280036311D /* sound.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2133620FC44280036311D /* sound.bundle */; };
 		9DD2134020FC744C0036311D /* PZSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2133F20FC744C0036311D /* PZSetViewController.m */; };
 		9DD2134620FC767C0036311D /* PZLanchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134520FC767C0036311D /* PZLanchViewController.m */; };
 		9DD2134920FC77880036311D /* PZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134820FC77880036311D /* PZNavigationController.m */; };
@@ -138,6 +138,7 @@
 		9DC1F02F21017958002C7771 /* PZPublicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZPublicHeader.h; sourceTree = "<group>"; };
 		9DC1F03021017DE0002C7771 /* PZAlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZAlertManager.h; sourceTree = "<group>"; };
 		9DC1F03121017DE0002C7771 /* PZAlertManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZAlertManager.m; sourceTree = "<group>"; };
+		9DC1F03321018340002C7771 /* sound.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = sound.bundle; sourceTree = "<group>"; };
 		9DD212FD20FC38190036311D /* PuzGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuzGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD2130020FC38190036311D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9DD2130120FC38190036311D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -152,7 +153,6 @@
 		9DD2132620FC381B0036311D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DD2133220FC387F0036311D /* PZSoundToolManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZSoundToolManger.h; sourceTree = "<group>"; };
 		9DD2133320FC387F0036311D /* PZSoundToolManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZSoundToolManger.m; sourceTree = "<group>"; };
-		9DD2133620FC44280036311D /* sound.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = sound.bundle; sourceTree = "<group>"; };
 		9DD2133920FC44720036311D /* PZSoundHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZSoundHeader.h; sourceTree = "<group>"; };
 		9DD2133E20FC744C0036311D /* PZSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZSetViewController.h; sourceTree = "<group>"; };
 		9DD2133F20FC744C0036311D /* PZSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZSetViewController.m; sourceTree = "<group>"; };
@@ -442,8 +442,8 @@
 		9DD2133A20FC72580036311D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				9DC1F03321018340002C7771 /* sound.bundle */,
 				9DC1EFFC210059F3002C7771 /* bg_music.mp3 */,
-				9DD2133620FC44280036311D /* sound.bundle */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -754,6 +754,7 @@
 				9DC1EFFD210059F3002C7771 /* bg_music.mp3 in Resources */,
 				9DD2136620FC8C4C0036311D /* arrow-right@2x.png in Resources */,
 				9DD2136F20FC8C4C0036311D /* arrow-left@3x.png in Resources */,
+				9DC1F03421018340002C7771 /* sound.bundle in Resources */,
 				9DC1F00821016F82002C7771 /* README.md in Resources */,
 				9DD2136C20FC8C4C0036311D /* arrow-down@2x.png in Resources */,
 				9DD2136820FC8C4C0036311D /* arrow-down.png in Resources */,
@@ -761,7 +762,6 @@
 				9DD2136420FC8C4C0036311D /* arrow-right@3x.png in Resources */,
 				9DD2136A20FC8C4C0036311D /* arrow-left@2x.png in Resources */,
 				9DD2130A20FC381A0036311D /* Assets.xcassets in Resources */,
-				9DD2133820FC44280036311D /* sound.bundle in Resources */,
 				9DD2136E20FC8C4C0036311D /* arrow-top@3x.png in Resources */,
 				9DC1F00721016F82002C7771 /* LICENSE in Resources */,
 				9DC1EFEC20FF406D002C7771 /* images.xcassets in Resources */,
