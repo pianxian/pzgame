@@ -29,6 +29,13 @@
 		9DC1F02D21017934002C7771 /* UIFont+fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F02A21017933002C7771 /* UIFont+fonts.m */; };
 		9DC1F03221017DE0002C7771 /* PZAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F03121017DE0002C7771 /* PZAlertManager.m */; };
 		9DC1F03421018340002C7771 /* sound.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1F03321018340002C7771 /* sound.bundle */; };
+		9DC1F0362101BF9E002C7771 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC1F0352101BF9E002C7771 /* SystemConfiguration.framework */; };
+		9DC1F0382101BFA4002C7771 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC1F0372101BFA4002C7771 /* Security.framework */; };
+		9DC1F03A2101BFAF002C7771 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC1F0392101BFAF002C7771 /* libz.tbd */; };
+		9DC1F03C2101BFBD002C7771 /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC1F03B2101BFBD002C7771 /* libc.tbd */; };
+		9DC1F0552101CC39002C7771 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC1F0542101CC39002C7771 /* libsqlite3.tbd */; };
+		9DC1F0572101CC42002C7771 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC1F0562101CC42002C7771 /* CoreGraphics.framework */; };
+		9DC1F0592101CC72002C7771 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC1F0582101CC72002C7771 /* Photos.framework */; };
 		9DD2130220FC38190036311D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2130120FC38190036311D /* AppDelegate.m */; };
 		9DD2130A20FC381A0036311D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2130920FC381A0036311D /* Assets.xcassets */; };
 		9DD2131020FC381A0036311D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2130F20FC381A0036311D /* main.m */; };
@@ -139,6 +146,14 @@
 		9DC1F03021017DE0002C7771 /* PZAlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZAlertManager.h; sourceTree = "<group>"; };
 		9DC1F03121017DE0002C7771 /* PZAlertManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZAlertManager.m; sourceTree = "<group>"; };
 		9DC1F03321018340002C7771 /* sound.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = sound.bundle; sourceTree = "<group>"; };
+		9DC1F0352101BF9E002C7771 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9DC1F0372101BFA4002C7771 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9DC1F0392101BFAF002C7771 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9DC1F03B2101BFBD002C7771 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		9DC1F03D2101BFFA002C7771 /* PZKeyHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZKeyHeader.h; sourceTree = "<group>"; };
+		9DC1F0542101CC39002C7771 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9DC1F0562101CC42002C7771 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9DC1F0582101CC72002C7771 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		9DD212FD20FC38190036311D /* PuzGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuzGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD2130020FC38190036311D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9DD2130120FC38190036311D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -210,6 +225,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC1F0592101CC72002C7771 /* Photos.framework in Frameworks */,
+				9DC1F0572101CC42002C7771 /* CoreGraphics.framework in Frameworks */,
+				9DC1F0552101CC39002C7771 /* libsqlite3.tbd in Frameworks */,
+				9DC1F03C2101BFBD002C7771 /* libc.tbd in Frameworks */,
+				9DC1F03A2101BFAF002C7771 /* libz.tbd in Frameworks */,
+				9DC1F0382101BFA4002C7771 /* Security.framework in Frameworks */,
+				9DC1F0362101BF9E002C7771 /* SystemConfiguration.framework in Frameworks */,
 				9BF8398C65ED732385660A20 /* libPods-PuzGame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +270,13 @@
 		67A02621F4102C5B00423AB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9DC1F0582101CC72002C7771 /* Photos.framework */,
+				9DC1F0562101CC42002C7771 /* CoreGraphics.framework */,
+				9DC1F0542101CC39002C7771 /* libsqlite3.tbd */,
+				9DC1F03B2101BFBD002C7771 /* libc.tbd */,
+				9DC1F0392101BFAF002C7771 /* libz.tbd */,
+				9DC1F0372101BFA4002C7771 /* Security.framework */,
+				9DC1F0352101BF9E002C7771 /* SystemConfiguration.framework */,
 				21EC9E59CA2F65432BFEC602 /* libPods-PuzGame.a */,
 			);
 			name = Frameworks;
@@ -359,6 +388,7 @@
 				9DC1F022210178E1002C7771 /* PZConstantHeader.h */,
 				9DC1F02E21017944002C7771 /* PZCategoryHeader.h */,
 				9DC1F02F21017958002C7771 /* PZPublicHeader.h */,
+				9DC1F03D2101BFFA002C7771 /* PZKeyHeader.h */,
 			);
 			path = PZHeader;
 			sourceTree = "<group>";
@@ -375,6 +405,14 @@
 			);
 			path = category;
 			sourceTree = "<group>";
+		};
+		9DC1F03E2101CBEF002C7771 /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FrameWork;
+			path = PuzGame/FrameWork;
+			sourceTree = SOURCE_ROOT;
 		};
 		9DD212F420FC38190036311D = {
 			isa = PBXGroup;
@@ -451,6 +489,7 @@
 		9DD2133B20FC726C0036311D /* Classess */ = {
 			isa = PBXGroup;
 			children = (
+				9DC1F03E2101CBEF002C7771 /* FrameWork */,
 				9DC1F023210178F8002C7771 /* PZHeader */,
 				9DD2135020FC8C4C0036311D /* XWCoachMask */,
 				9DD2133D20FC72CF0036311D /* Main */,
@@ -813,9 +852,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PuzGame/Pods-PuzGame-resources.sh",
+				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -973,7 +1015,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.PZGreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos11.4;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -995,7 +1037,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.PZGreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos11.4;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -1119,10 +1161,21 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PuzGame/FrameWork/share_ios_6.9.4/UMSocialUI",
+					"$(PROJECT_DIR)/PuzGame/FrameWork/share_ios_6.9.4",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PuzGame/PZ-PrefixHeader.pch";
 				INFOPLIST_FILE = PuzGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PuzGame/FrameWork/share_ios_6.9.4/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/PuzGame/FrameWork/share_ios_6.9.4/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/PuzGame/FrameWork/share_ios_6.9.4/SocialLibraries/QQ",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hww.wljy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1138,10 +1191,21 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PuzGame/FrameWork/share_ios_6.9.4/UMSocialUI",
+					"$(PROJECT_DIR)/PuzGame/FrameWork/share_ios_6.9.4",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PuzGame/PZ-PrefixHeader.pch";
 				INFOPLIST_FILE = PuzGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PuzGame/FrameWork/share_ios_6.9.4/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/PuzGame/FrameWork/share_ios_6.9.4/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/PuzGame/FrameWork/share_ios_6.9.4/SocialLibraries/QQ",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hww.wljy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1223,7 +1287,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = www.PZBlack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos11.4;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -1245,7 +1309,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = www.PZBlack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos11.4;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -1267,7 +1331,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = www.PZWhite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos11.4;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -1289,7 +1353,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = www.PZWhite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos11.4;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = bundle;
 			};

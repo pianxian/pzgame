@@ -34,7 +34,9 @@ void UncaughExceptionHandler(NSException *exception){
     }else{
        [[SDThemeManager sharedInstance] changeTheme:@"PZWhite"];
     }
-    
+
+    [Bugly startWithAppId:PZBuglyKey];
+
     [[UIApplication sharedApplication] theme_setStatusBarColor:@"status_bar_default" animated:YES];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     PZLanchViewController *lanchView = [[PZLanchViewController alloc] init];
@@ -76,5 +78,9 @@ void UncaughExceptionHandler(NSException *exception){
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//#ifdef NSFoundationVersionNumber_iOS_9_0
+//
+//
+//#endif
 
 @end

@@ -339,6 +339,9 @@ static NSString *FooterView = @"FooterView";
     [self presentViewController:alert animated:YES completion:nil];
     
 }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+}
 
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];

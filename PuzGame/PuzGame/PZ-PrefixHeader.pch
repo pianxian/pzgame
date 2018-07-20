@@ -11,6 +11,6 @@
 #import "PZPublicHeader.h"
 #import "PZCategoryHeader.h"
 #import "PZConstantHeader.h"
-
+#import "PZKeyHeader.h"
 
 #endif /* PZ_PrefixHeader_pch */
