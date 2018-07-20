@@ -9,7 +9,7 @@
 
 #import "PZGameCell.h"
 #import "PZStageInfo.h"
-
+#import "UIView+PZImage.h"
 @interface PZGameCell()
 @property (nonatomic,strong) UILabel *titleLab;
 @property (nonatomic,strong) UIImageView *bgImageView;
@@ -33,11 +33,13 @@
     _deleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _deleBtn.hidden = YES;
     _deleBtn.alpha = 0;
-    [_deleBtn setBackgroundImage:[UIImage imageNamed:@"dele_Back"] forState:UIControlStateNormal];
+    _deleBtn.layer.cornerRadius = 18;
+    _deleBtn.clipsToBounds = YES;
+    [_deleBtn setBackgroundImage:[UIImage imageNamed:@"delebtn"] forState:UIControlStateNormal];
     [self addSubview:_deleBtn];
     [_deleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(@-5);
-        make.top.equalTo(@5);
+        make.right.equalTo(@-2);
+        make.top.equalTo(@2);
     }];
     [_deleBtn addTarget:self action:@selector(deleBtnAction:) forControlEvents:UIControlEventTouchUpInside];
 }

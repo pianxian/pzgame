@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "dele_Back.png",
+      "filename" : "delebtn.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "dele_Back@2x.png",
+      "filename" : "delebtn@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "dele_Back@3x.png",
+      "filename" : "delebtn@3x.png",
       "scale" : "3x"
     }
   ],

@@ -72,17 +72,22 @@ static NSString *FooterView = @"FooterView";
       
             
             PZGameCell *cell = (PZGameCell *)[self.collectionView cellForItemAtIndexPath:indepath];
-            cell.deleBtn.hidden = NO;
-            CAAnimationGroup *groupAnimation = [CAAnimationGroup animation];
-
-            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-            animation.removedOnCompletion = NO;
-            animation.fillMode = kCAFillModeForwards;
-            animation.fromValue = [NSNumber numberWithDouble:0.f];
-            animation.toValue = [NSNumber numberWithDouble:1.f];
-            animation.duration = 1.0;
-            [cell.deleBtn.layer addAnimation:animation forKey:nil];
-
+           
+//            CAAnimationGroup *groupAnimation = [CAAnimationGroup animation];
+//
+//            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+//            animation.removedOnCompletion = NO;
+//            animation.fillMode = kCAFillModeForwards;
+//            animation.fromValue = [NSNumber numberWithDouble:0.f];
+//            animation.toValue = [NSNumber numberWithDouble:1.f];
+//            animation.duration = 1.0;
+//            [cell.deleBtn.layer addAnimation:animation forKey:nil];
+            [UIView animateWithDuration:.35 animations:^{
+                cell.deleBtn.hidden = NO;
+                cell.deleBtn.alpha = 1.f;
+            } completion:^(BOOL finished) {
+                
+            }];
             __weak __typeof(cell)weakCell = cell;
             cell.gameCellCallBack = ^(PZGameCell *gameCell) {
 
@@ -94,6 +99,7 @@ static NSString *FooterView = @"FooterView";
                     NSMutableArray *replaceArray = self.titleArray[indepath.section];
                     [replaceArray removeObjectAtIndex:indepath.row];
                     [self.titleArray replaceObjectAtIndex:indepath.section withObject:replaceArray];
+                    [[PZStageManager shareStageInfoManager] archiverDataWithData:self.titleArray andKey:kArchivingDataKey filePath:kArchiverPath];
                     [self.collectionView reloadData];
                 }
             };
@@ -209,6 +215,9 @@ static NSString *FooterView = @"FooterView";
     return CGSizeMake((PZ_WIDTH - 2*PZ_SPACE - 60) /3, (PZ_WIDTH - 2*PZ_SPACE -60) /3);
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    PZGameCell *gCell = (PZGameCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    gCell.deleBtn.hidden = YES;
+    
     PZPlayViewController *playView = [[PZPlayViewController alloc] init];
     PZStageInfo *info = _titleArray[indexPath.section][indexPath.row];
     UIImage *img = nil;
@@ -345,7 +354,7 @@ static NSString *FooterView = @"FooterView";
         if ( [UIImagePNGRepresentation(tmpImg) writeToFile:filePath atomically:YES]) {
         
         }else{
-            @throw [NSException exceptionWithName:@"图片保存失败" reason:@"可能图片过大或者格式不对" userInfo:nil];
+            @throw [NSException exceptionWithName:@"图片保存失败" reason:nil userInfo:nil];
         }
 
         NSMutableArray *mutbArray = [NSMutableArray array];
