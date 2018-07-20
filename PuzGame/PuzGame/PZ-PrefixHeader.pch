@@ -1,0 +1,16 @@
+//
+//  PZ-PrefixHeader.pch
+//  PuzGame
+//
+//  Created by hww on 2018/7/20.
+//  Copyright © 2018年 hww. All rights reserved.
+//
+
+#ifndef PZ_PrefixHeader_pch
+#define PZ_PrefixHeader_pch
+#import "PZPublicHeader.h"
+#import "PZCategoryHeader.h"
+#import "PZConstantHeader.h"
+
+
+#endif /* PZ_PrefixHeader_pch */

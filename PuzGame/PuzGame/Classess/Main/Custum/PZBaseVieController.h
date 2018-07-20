@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SDTheme.h>
+
 @interface PZBaseVieController : UIViewController
 
 @end

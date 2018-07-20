@@ -9,7 +9,7 @@
 
 #import "PZBackTypeVieController.h"
 #import "PZSetCell.h"
-#import <SDTheme.h>
+
 @interface PZBackTypeVieController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *_dataSource;

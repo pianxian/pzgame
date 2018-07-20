@@ -8,10 +8,8 @@
 //
 
 #import "PZNavigationController.h"
-#import <SDTheme.h>
-#define IOS_VERSION            [[[UIDevice currentDevice] systemVersion] floatValue]
 
-#define SMCOLOR(r,g,b,a) (IOS_VERSION >=10.0f ? [UIColor colorWithDisplayP3Red:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)] : [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)])
+
 
 @interface PZNavigationController ()
 
@@ -20,14 +18,8 @@
 @implementation PZNavigationController
 
 - (void)viewDidLoad {
-//    [super viewDidLoad];
-//    self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:SMCOLOR(96, 96, 96,1),NSFontAttributeName:[UIFont systemFontOfSize:17]};
-//    [self.navigationItem.leftBarButtonItem theme_setTitleTextAttributes:@{SDThemeForegroundColorAttributeName:@"block_bg",NSFontAttributeName:[UIFont boldSystemFontOfSize:17]} forState:UIControlStateNormal];
-//      [self.navigationItem.leftBarButtonItem theme_setTitleTextAttributes:@{SDThemeForegroundColorAttributeName:@"block_bg",NSFontAttributeName:[UIFont boldSystemFontOfSize:17]} forState:UIControlStateHighlighted];
-//    self.navigationItem.leftBarButtonItem
-//    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:SMCOLOR(96, 96, 96,1),NSFontAttributeName:[UIFont boldSystemFontOfSize:17]} forState:UIControlStateNormal];
-//    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:SMCOLOR(96, 96, 96,1),NSFontAttributeName:[UIFont boldSystemFontOfSize:17]} forState:UIControlStateHighlighted];
-//    [self.navigationBar setTintColor:SMCOLOR(96, 96, 96,1)];
+    [super viewDidLoad];
+
     self.navigationBar.theme_barTintColor = @"block_bg";
     // Do any additional setup after loading the view.
 }

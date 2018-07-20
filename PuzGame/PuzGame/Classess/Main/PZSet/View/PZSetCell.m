@@ -9,8 +9,7 @@
 #import "PZSetCell.h"
 #import "UIFont+fonts.h"
 #import "UIColor+SMColor.h"
-#import <Masonry.h>
-#import <SDTheme.h>
+
 @interface PZSetCell ()
 //图标
 @property (nonatomic,weak) UIImageView *iconImageView;

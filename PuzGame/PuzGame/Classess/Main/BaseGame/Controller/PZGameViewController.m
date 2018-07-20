@@ -9,17 +9,14 @@
 #import "PZGameViewController.h"
 #import "PZGameCell.h"
 #import "PZPlayViewController.h"
-#import <SDTheme.h>
 #import "PZStageInfo.h"
-#import <MJExtension.h>
 #import "PZSetViewController.h"
 #import "SMAuotherAction.h"
 #import <Photos/Photos.h>
 #import <PhotosUI/PhotosUI.h>
 #import "PZStageInfo.h"
-#define PZ_WIDTH [UIScreen mainScreen].bounds.size.width
-#define PZ_HEIGHT [UIScreen mainScreen].bounds.size.height
-#define PZ_NAVBARHEIGHT 100
+#import "PZStageManager.h"
+#define PZ_GameY 130
 #define PZ_SPACE 10
 #define  kArchivingDataKey @"kArchivingDataKey"
 #define kArchiverPath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject stringByAppendingPathComponent:@"imgarchiver"]
@@ -53,14 +50,12 @@ static NSString *FooterView = @"FooterView";
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(PZ_SPACE + 30, PZ_NAVBARHEIGHT + 30, PZ_WIDTH - 2 *PZ_SPACE - 60, PZ_HEIGHT - PZ_NAVBARHEIGHT - 30) collectionViewLayout:layout];
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(PZ_SPACE + 30, PZ_GameY , PZ_WIDTH - 2 *PZ_SPACE - 60, PZ_HEIGHT - PZ_GameY) collectionViewLayout:layout];
         collectionView.backgroundColor = [UIColor clearColor];
         [collectionView registerClass:[PZGameCell class] forCellWithReuseIdentifier:pzgameCell];
-
-//         [collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerViewIdentifier];
         [collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:FooterView];
-        collectionView.delegate = self;
-        collectionView.dataSource = self;
+        [collectionView setValue:self forKey:@"delegate"];
+        [collectionView setValue:self forKey:@"dataSource"];
         _collectionView = collectionView;
         [self.view addSubview:collectionView];
     }
@@ -73,7 +68,37 @@ static NSString *FooterView = @"FooterView";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self unarchiverDataWithFilePath:kArchiverPath archiverKey:kArchivingDataKey isData:^(NSMutableArray * data) {
+    [self resultDataSource];
+    [self intiliziaData];
+    [self setUI];
+    self.title = @"关卡选择";
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeModel:) name:@"changeModel" object:nil];
+    if (@available(iOS 11.0,*)) {
+        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }else{
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+}
+-(void)setUI{
+    UIButton *pzSetButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    pzSetButton.frame = CGRectMake(PZ_WIDTH - 55, 40, 40, 40);
+    [pzSetButton setBackgroundImage:[UIImage imageNamed:@"fail_button01-iphone4"] forState:UIControlStateNormal];
+    [pzSetButton addTarget:self action:@selector(pzSetButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:pzSetButton];
+}
+- (void)intiliziaData{
+    _imgCount = 0;
+    _diffculty = 3;
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"imgCount"]) {
+        _imgCount = [[NSUserDefaults standardUserDefaults] integerForKey:@"imgCount"];
+    }
+    NSInteger diffcutly = [[NSUserDefaults standardUserDefaults] integerForKey:@"diffcutly"];
+    if (diffcutly) {
+        _diffculty = (int)diffcutly;
+    }
+}
+- (void)resultDataSource{
+    [[PZStageManager shareStageInfoManager] unarchiverDataWithFilePath:kArchiverPath archiverKey:kArchivingDataKey isData:^(NSMutableArray *data) {
         for (int i = 0; i < data.count; i ++) {
             NSMutableArray *infos = data[i];
             [self.titleArray addObject:infos];
@@ -94,9 +119,10 @@ static NSString *FooterView = @"FooterView";
             }
             [archiverMutab addObject:archiverInfos];
         }
-        [self archiverDataWithData:archiverMutab andKey:kArchivingDataKey filePath:kArchiverPath];
-        while (self.titleArray.count < 3) {
-            [self unarchiverDataWithFilePath:kArchiverPath archiverKey:kArchivingDataKey isData:^(NSMutableArray *data) {
+        //上面已进行归档 下面进行解档
+        [[PZStageManager shareStageInfoManager] archiverDataWithData:archiverMutab andKey:kArchivingDataKey filePath:kArchiverPath];
+        while (self.titleArray.count < 3) {//第一次加载只有9个数据 3行 titlearray长度小于3表示还没解档完
+            [[PZStageManager shareStageInfoManager] unarchiverDataWithFilePath:kArchiverPath archiverKey:kArchivingDataKey isData:^(NSMutableArray *data) {
                 for (int i = 0; i < data.count; i ++) {
                     NSMutableArray *infos = data[i];
                     [self.titleArray addObject:infos];
@@ -107,56 +133,8 @@ static NSString *FooterView = @"FooterView";
             }];
         }
     }];
-    
-    self.title = @"关卡选择";
-     _imgCount = 0;
-    _diffculty = 3;
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"imgCount"]) {
-        _imgCount = [[NSUserDefaults standardUserDefaults] integerForKey:@"imgCount"];
-    }
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeModel:) name:@"changeModel" object:nil];
-    NSInteger diffcutly = [[NSUserDefaults standardUserDefaults] integerForKey:@"diffcutly"];
-    if (diffcutly) {
-        _diffculty = (int)diffcutly;
-    }
-    UIButton *pzSetButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    pzSetButton.frame = CGRectMake(PZ_WIDTH - 55, 40, 40, 40);
-    [pzSetButton setBackgroundImage:[UIImage imageNamed:@"fail_button01-iphone4"] forState:UIControlStateNormal];
-    [pzSetButton addTarget:self action:@selector(pzSetButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:pzSetButton];
-    
-    if (@available(iOS 11.0,*)) {
-        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }else{
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
-    self.view.backgroundColor = [UIColor whiteColor];
 }
-- (void)unarchiverDataWithFilePath:(NSString *)path archiverKey:(NSString *)key isData:(void(^)(NSMutableArray *data))dataAVailable noData:(void(^)(void))unAvailable{
-    NSData *sourceData = [[NSMutableData alloc] initWithContentsOfFile:kArchiverPath];
-    if (sourceData) {
-        NSLog(@"已归档");
-        NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:sourceData];
-        NSMutableArray *unarchiverMutableArr = [unarchiver decodeObjectForKey:kArchivingDataKey];
-        [unarchiver finishDecoding];
-        dataAVailable(unarchiverMutableArr);
-    }else{
-        NSLog(@"未找到归档文件");
-        unAvailable();
-    }
-}
-- (void)archiverDataWithData:(id)sourcedData andKey:(NSString *)key filePath:(NSString *)path{
-    NSMutableData *data = [[NSMutableData alloc] init];
-    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-    [archiver encodeObject:sourcedData forKey:key]; // archivingDate的encodeWithCoder
-    [archiver finishEncoding];
-    if ([data writeToFile:path atomically:YES]) {
-        NSLog(@"归档成功");
-    }else{
-        @throw [NSException exceptionWithName:@"归档失败" reason:nil userInfo:nil];
-    }
-}
+
 - (void)changeModel:(NSNotification *)notification{
     NSInteger diffculty = [notification.userInfo[@"diffcutly"] integerValue];
     _diffculty = (int)diffculty;
@@ -201,14 +179,14 @@ static NSString *FooterView = @"FooterView";
 }
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     UICollectionReusableView *reusableView =nil;
-    //返回段头段尾视图
-    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        UICollectionReusableView *header=[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerViewIdentifier forIndexPath:indexPath];
-        //添加头视图的内容
-        header.backgroundColor = [UIColor redColor];
-        reusableView = header;
-//        return reusableView;
-    }
+//    //返回段头段尾视图
+//    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+//        UICollectionReusableView *header=[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerViewIdentifier forIndexPath:indexPath];
+//        //添加头视图的内容
+//        header.backgroundColor = [UIColor redColor];
+//        reusableView = header;
+////        return reusableView;
+//    }
     //如果底部视图
     if (kind ==UICollectionElementKindSectionFooter)
     {
@@ -236,22 +214,12 @@ static NSString *FooterView = @"FooterView";
         case UIImagePickerControllerSourceTypeCamera:
         {
             if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-                //            SMLog(@"支持相机");
                 if ([SMAuotherAction checkVideoStatus]) {
                     [self presentToCamera:UIImagePickerControllerSourceTypeCamera];
                 }else{
                     [SMAuotherAction videoAuthAction:^(BOOL granted) {
                         if (!granted) {
-                            [self alertWithTitle:@"您未允许Easy拼图访问您的相机" message:@"是否去设置？" actionTitle:@"去设置" inControl:self action:^{
-                                if( [[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]] ) {
-                                    if (@available(iOS 10.0, *)) {
-                                        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{}completionHandler:^(BOOL        success) {
-                                        }];
-                                    } else {
-                                        // Fallback on earlier versions
-                                    }
-                                }
-                            }];
+                            [self AlbumDeniedTosetWithTitle:@"相机"];
                         }else{
                             [self presentToCamera:UIImagePickerControllerSourceTypeCamera];
                         }
@@ -280,16 +248,7 @@ static NSString *FooterView = @"FooterView";
                     }];
                 }else if ([SMAuotherAction isPhotoAlbumDenied]){
                     // 如果已经拒绝，则弹出对话框
-                    [self alertWithTitle:@"您未允许Easy拼图访问您的相册" message:@"是否去设置？" actionTitle:@"去设置" inControl:self action:^{
-                        if( [[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]] ) {
-                            if (@available(iOS 10.0, *)) {
-                                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{}completionHandler:^(BOOL        success) {
-                                }];
-                            } else {
-                                // Fallback on earlier versions
-                            }
-                        }
-                    }];
+                    [self AlbumDeniedTosetWithTitle:@"相册"];
                 }else{//已经授权
                     [self presentToCamera:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
                 }
@@ -303,20 +262,27 @@ static NSString *FooterView = @"FooterView";
             break;
     }
 }
-
+- (void)AlbumDeniedTosetWithTitle:(NSString *)title{
+    
+    [self alertWithTitle:[NSString stringWithFormat:@"您未允许Easy拼图访问您的%@",title] message:@"是否去设置？" actionTitle:@"去设置" inControl:self action:^{
+        if( [[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]] ) {
+            if (@available(iOS 10.0, *)) {
+                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{}completionHandler:^(BOOL        success) {
+                }];
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+    }];
+}
 -(void)alertWithTitle:(NSString *)title message:(NSString *)message actionTitle:(NSString *)actionTitle inControl:(UIViewController *)controller action:(void (^)(void))handler{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-//    UIAlertAction *actionCancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-//
-//    }];
     UIAlertAction *actionAction = [UIAlertAction actionWithTitle:actionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         handler();
     }];
-//    [alert addAction:actionCancle];
     [alert addAction:actionAction];
     [controller presentViewController:alert animated:YES completion:nil];
 }
-
 
 - (void)presentToCamera:(UIImagePickerControllerSourceType)sourceType{
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -330,9 +296,7 @@ static NSString *FooterView = @"FooterView";
 }
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:^{
-        
         UIImage *tmpImg = info[UIImagePickerControllerEditedImage];
-//        NSLog(@"---%@",tmpImg);
         self->_imgCount ++;
         [[NSUserDefaults standardUserDefaults] setInteger:self->_imgCount forKey:@"imgCount"];
         [[NSUserDefaults standardUserDefaults] synchronize];
@@ -340,7 +304,7 @@ static NSString *FooterView = @"FooterView";
         NSString *imgNmae = [NSString stringWithFormat:@"myImg_%ld.png",self->_imgCount];
         NSString *filePath = [paths.lastObject stringByAppendingPathComponent:imgNmae];
         if ( [UIImagePNGRepresentation(tmpImg) writeToFile:filePath atomically:YES]) {
-            
+        
         }else{
             @throw [NSException exceptionWithName:@"图片保存失败" reason:@"可能图片过大或者格式不对" userInfo:nil];
         }
@@ -361,22 +325,12 @@ static NSString *FooterView = @"FooterView";
           [self.titleArray insertObject:mutbArray atIndex:self.titleArray.count];
         }
 
-        [self archiverDataWithData:self.titleArray andKey:kArchivingDataKey filePath:kArchiverPath];
+        [[PZStageManager shareStageInfoManager] archiverDataWithData:self.titleArray andKey:kArchivingDataKey filePath:kArchiverPath];
+        
         [self.collectionView reloadData];
     
     }];
 }
-
-//- (void)changePig:(NSInteger)index {
-//    _showBgImg = YES;
-//    self.puzzlebgImg = [UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpg", (long)index]];
-//    [self refreshAction:nil];
-//}
-//
-//- (void)changeSound:(NSInteger)soundId {
-//
-//    _sound = (unsigned int)soundId;
-//}
 
 //打开相册
 - (void)openCamera:(id)sender {

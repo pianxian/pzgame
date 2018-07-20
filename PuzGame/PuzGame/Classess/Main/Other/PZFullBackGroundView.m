@@ -6,7 +6,7 @@
 //  Copyright © 2018年 hww. All rights reserved.
 //
 
-#define iPhone5 ([[UIScreen mainScreen] bounds].size.height == 568 || [[UIScreen mainScreen] bounds].size.height == 1136)
+
 #import "PZFullBackGroundView.h"
 #import "UIView+PZImage.h"
 @implementation PZFullBackGroundView

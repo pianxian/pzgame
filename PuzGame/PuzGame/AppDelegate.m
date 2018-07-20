@@ -10,8 +10,7 @@
 #import "PZGameViewController.h"
 #import "PZLanchViewController.h"
 #import "PZNavigationController.h"
-#import <SDTheme.h>
-#import <MLTransition.h>
+
 @interface AppDelegate ()
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "SMAuotherAction.h"
-#import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
 

@@ -7,11 +7,9 @@
 //
 
 #import "PZSetViewController.h"
-#import <SDTheme.h>
 #import "PZSetCell.h"
 #import "PZGameModelController.h"
 #import "PZBackTypeVieController.h"
-#import <Masonry/Masonry.h>
 #import "PZSoundToolManger.h"
 @interface PZSetViewController ()<UITableViewDelegate,UITableViewDataSource>
 {

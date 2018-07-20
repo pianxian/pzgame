@@ -17,8 +17,16 @@
 		9DC1EFED20FF406D002C7771 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFEB20FF406D002C7771 /* images.xcassets */; };
 		9DC1EFF020FF4183002C7771 /* PZGreen.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFE320FF402D002C7771 /* PZGreen.bundle */; };
 		9DC1EFF621001CAC002C7771 /* PZFullBackGroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1EFF521001CAC002C7771 /* PZFullBackGroundView.m */; };
-		9DC1EFFA21001CC8002C7771 /* UIView+PZImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1EFF921001CC8002C7771 /* UIView+PZImage.m */; };
 		9DC1EFFD210059F3002C7771 /* bg_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFFC210059F3002C7771 /* bg_music.mp3 */; };
+		9DC1F00721016F82002C7771 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1F00521016F81002C7771 /* LICENSE */; };
+		9DC1F00821016F82002C7771 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1F00621016F82002C7771 /* README.md */; };
+		9DC1F01B2101723B002C7771 /* PZPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F0132101723B002C7771 /* PZPlayViewController.m */; };
+		9DC1F01C2101723B002C7771 /* PZGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F0142101723B002C7771 /* PZGameViewController.m */; };
+		9DC1F01D2101723B002C7771 /* PZStageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F0162101723B002C7771 /* PZStageInfo.m */; };
+		9DC1F01E2101723B002C7771 /* PZGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F01A2101723B002C7771 /* PZGameCell.m */; };
+		9DC1F02B21017934002C7771 /* UIView+PZImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F02821017933002C7771 /* UIView+PZImage.m */; };
+		9DC1F02C21017934002C7771 /* UIColor+SMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F02921017933002C7771 /* UIColor+SMColor.m */; };
+		9DC1F02D21017934002C7771 /* UIFont+fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC1F02A21017933002C7771 /* UIFont+fonts.m */; };
 		9DD2130220FC38190036311D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2130120FC38190036311D /* AppDelegate.m */; };
 		9DD2130A20FC381A0036311D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2130920FC381A0036311D /* Assets.xcassets */; };
 		9DD2131020FC381A0036311D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2130F20FC381A0036311D /* main.m */; };
@@ -27,11 +35,8 @@
 		9DD2133420FC387F0036311D /* PZSoundToolManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2133320FC387F0036311D /* PZSoundToolManger.m */; };
 		9DD2133820FC44280036311D /* sound.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2133620FC44280036311D /* sound.bundle */; };
 		9DD2134020FC744C0036311D /* PZSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2133F20FC744C0036311D /* PZSetViewController.m */; };
-		9DD2134320FC75CF0036311D /* PZGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134220FC75CF0036311D /* PZGameViewController.m */; };
 		9DD2134620FC767C0036311D /* PZLanchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134520FC767C0036311D /* PZLanchViewController.m */; };
 		9DD2134920FC77880036311D /* PZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134820FC77880036311D /* PZNavigationController.m */; };
-		9DD2134C20FC81620036311D /* PZGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134B20FC81620036311D /* PZGameCell.m */; };
-		9DD2134F20FC8B8E0036311D /* PZPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2134E20FC8B8E0036311D /* PZPlayViewController.m */; };
 		9DD2136220FC8C4C0036311D /* XWMaskItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2135120FC8C4C0036311D /* XWMaskItem.m */; };
 		9DD2136320FC8C4C0036311D /* XWCoachMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2135420FC8C4C0036311D /* XWCoachMask.m */; };
 		9DD2136420FC8C4C0036311D /* arrow-right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135620FC8C4C0036311D /* arrow-right@3x.png */; };
@@ -46,15 +51,12 @@
 		9DD2136D20FC8C4C0036311D /* arrow-down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2135F20FC8C4C0036311D /* arrow-down@3x.png */; };
 		9DD2136E20FC8C4C0036311D /* arrow-top@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2136020FC8C4C0036311D /* arrow-top@3x.png */; };
 		9DD2136F20FC8C4C0036311D /* arrow-left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2136120FC8C4C0036311D /* arrow-left@3x.png */; };
-		9DD2139220FD7AC40036311D /* PZStageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD2139120FD7AC40036311D /* PZStageInfo.m */; };
 		9DD213AB20FD82480036311D /* PZBlack.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DD2139720FD800E0036311D /* PZBlack.bundle */; };
 		9DD213AC20FD82510036311D /* PZWhite.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DD213A120FD80330036311D /* PZWhite.bundle */; };
 		9DD213B020FD82D80036311D /* ColorsMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DD213AF20FD82D70036311D /* ColorsMap.plist */; };
 		9DD213B220FD82DE0036311D /* ColorsMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DD213B120FD82DE0036311D /* ColorsMap.plist */; };
 		9DD213B520FDD3B30036311D /* PZStageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213B420FDD3B30036311D /* PZStageManager.m */; };
 		9DD213BB20FEDDE40036311D /* PZSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213BA20FEDDE40036311D /* PZSetCell.m */; };
-		9DD213BE20FEDF280036311D /* UIFont+fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213BD20FEDF280036311D /* UIFont+fonts.m */; };
-		9DD213C120FEDF570036311D /* UIColor+SMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213C020FEDF570036311D /* UIColor+SMColor.m */; };
 		9DD213C420FEE7610036311D /* PZGameModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213C320FEE7610036311D /* PZGameModelController.m */; };
 		9DD213C820FEE8830036311D /* PZBackTypeVieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213C720FEE8830036311D /* PZBackTypeVieController.m */; };
 		9DD213CB20FF128B0036311D /* PZBaseVieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD213CA20FF128B0036311D /* PZBaseVieController.m */; };
@@ -112,9 +114,27 @@
 		9DC1EFEB20FF406D002C7771 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		9DC1EFF421001CAC002C7771 /* PZFullBackGroundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZFullBackGroundView.h; sourceTree = "<group>"; };
 		9DC1EFF521001CAC002C7771 /* PZFullBackGroundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZFullBackGroundView.m; sourceTree = "<group>"; };
-		9DC1EFF821001CC8002C7771 /* UIView+PZImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+PZImage.h"; sourceTree = "<group>"; };
-		9DC1EFF921001CC8002C7771 /* UIView+PZImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+PZImage.m"; sourceTree = "<group>"; };
 		9DC1EFFC210059F3002C7771 /* bg_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg_music.mp3; sourceTree = "<group>"; };
+		9DC1F00521016F81002C7771 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		9DC1F00621016F82002C7771 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		9DC1F00921016F94002C7771 /* PZ-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PZ-PrefixHeader.pch"; sourceTree = "<group>"; };
+		9DC1F0112101723B002C7771 /* PZPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZPlayViewController.h; sourceTree = "<group>"; };
+		9DC1F0122101723B002C7771 /* PZGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZGameViewController.h; sourceTree = "<group>"; };
+		9DC1F0132101723B002C7771 /* PZPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZPlayViewController.m; sourceTree = "<group>"; };
+		9DC1F0142101723B002C7771 /* PZGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZGameViewController.m; sourceTree = "<group>"; };
+		9DC1F0162101723B002C7771 /* PZStageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZStageInfo.m; sourceTree = "<group>"; };
+		9DC1F0172101723B002C7771 /* PZStageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZStageInfo.h; sourceTree = "<group>"; };
+		9DC1F0192101723B002C7771 /* PZGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZGameCell.h; sourceTree = "<group>"; };
+		9DC1F01A2101723B002C7771 /* PZGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZGameCell.m; sourceTree = "<group>"; };
+		9DC1F022210178E1002C7771 /* PZConstantHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZConstantHeader.h; sourceTree = "<group>"; };
+		9DC1F02521017933002C7771 /* UIColor+SMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SMColor.h"; sourceTree = "<group>"; };
+		9DC1F02621017933002C7771 /* UIView+PZImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PZImage.h"; sourceTree = "<group>"; };
+		9DC1F02721017933002C7771 /* UIFont+fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+fonts.h"; sourceTree = "<group>"; };
+		9DC1F02821017933002C7771 /* UIView+PZImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PZImage.m"; sourceTree = "<group>"; };
+		9DC1F02921017933002C7771 /* UIColor+SMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SMColor.m"; sourceTree = "<group>"; };
+		9DC1F02A21017933002C7771 /* UIFont+fonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+fonts.m"; sourceTree = "<group>"; };
+		9DC1F02E21017944002C7771 /* PZCategoryHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZCategoryHeader.h; sourceTree = "<group>"; };
+		9DC1F02F21017958002C7771 /* PZPublicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZPublicHeader.h; sourceTree = "<group>"; };
 		9DD212FD20FC38190036311D /* PuzGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuzGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD2130020FC38190036311D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9DD2130120FC38190036311D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,16 +153,10 @@
 		9DD2133920FC44720036311D /* PZSoundHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZSoundHeader.h; sourceTree = "<group>"; };
 		9DD2133E20FC744C0036311D /* PZSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZSetViewController.h; sourceTree = "<group>"; };
 		9DD2133F20FC744C0036311D /* PZSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZSetViewController.m; sourceTree = "<group>"; };
-		9DD2134120FC75CF0036311D /* PZGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZGameViewController.h; sourceTree = "<group>"; };
-		9DD2134220FC75CF0036311D /* PZGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZGameViewController.m; sourceTree = "<group>"; };
 		9DD2134420FC767C0036311D /* PZLanchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZLanchViewController.h; sourceTree = "<group>"; };
 		9DD2134520FC767C0036311D /* PZLanchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZLanchViewController.m; sourceTree = "<group>"; };
 		9DD2134720FC77880036311D /* PZNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZNavigationController.h; sourceTree = "<group>"; };
 		9DD2134820FC77880036311D /* PZNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZNavigationController.m; sourceTree = "<group>"; };
-		9DD2134A20FC81620036311D /* PZGameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZGameCell.h; sourceTree = "<group>"; };
-		9DD2134B20FC81620036311D /* PZGameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZGameCell.m; sourceTree = "<group>"; };
-		9DD2134D20FC8B8E0036311D /* PZPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZPlayViewController.h; sourceTree = "<group>"; };
-		9DD2134E20FC8B8E0036311D /* PZPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZPlayViewController.m; sourceTree = "<group>"; };
 		9DD2135120FC8C4C0036311D /* XWMaskItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWMaskItem.m; sourceTree = "<group>"; };
 		9DD2135220FC8C4C0036311D /* XWCoachMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCoachMask.h; sourceTree = "<group>"; };
 		9DD2135320FC8C4C0036311D /* XWMaskItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWMaskItem.h; sourceTree = "<group>"; };
@@ -159,8 +173,6 @@
 		9DD2135F20FC8C4C0036311D /* arrow-down@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-down@3x.png"; sourceTree = "<group>"; };
 		9DD2136020FC8C4C0036311D /* arrow-top@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-top@3x.png"; sourceTree = "<group>"; };
 		9DD2136120FC8C4C0036311D /* arrow-left@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-left@3x.png"; sourceTree = "<group>"; };
-		9DD2139020FD7AC40036311D /* PZStageInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZStageInfo.h; sourceTree = "<group>"; };
-		9DD2139120FD7AC40036311D /* PZStageInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZStageInfo.m; sourceTree = "<group>"; };
 		9DD2139720FD800E0036311D /* PZBlack.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PZBlack.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD2139920FD800E0036311D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DD213A120FD80330036311D /* PZWhite.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PZWhite.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,10 +183,6 @@
 		9DD213B420FDD3B30036311D /* PZStageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZStageManager.m; sourceTree = "<group>"; };
 		9DD213B920FEDDE40036311D /* PZSetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZSetCell.h; sourceTree = "<group>"; };
 		9DD213BA20FEDDE40036311D /* PZSetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZSetCell.m; sourceTree = "<group>"; };
-		9DD213BC20FEDF270036311D /* UIFont+fonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+fonts.h"; sourceTree = "<group>"; };
-		9DD213BD20FEDF280036311D /* UIFont+fonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+fonts.m"; sourceTree = "<group>"; };
-		9DD213BF20FEDF570036311D /* UIColor+SMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SMColor.h"; sourceTree = "<group>"; };
-		9DD213C020FEDF570036311D /* UIColor+SMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SMColor.m"; sourceTree = "<group>"; };
 		9DD213C220FEE7610036311D /* PZGameModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZGameModelController.h; sourceTree = "<group>"; };
 		9DD213C320FEE7610036311D /* PZGameModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZGameModelController.m; sourceTree = "<group>"; };
 		9DD213C620FEE8830036311D /* PZBackTypeVieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZBackTypeVieController.h; sourceTree = "<group>"; };
@@ -261,6 +269,110 @@
 			path = PZGreen;
 			sourceTree = "<group>";
 		};
+		9DC1F00E210171C8002C7771 /* Custum */ = {
+			isa = PBXGroup;
+			children = (
+				9DD2134420FC767C0036311D /* PZLanchViewController.h */,
+				9DD2134520FC767C0036311D /* PZLanchViewController.m */,
+				9DD2134720FC77880036311D /* PZNavigationController.h */,
+				9DD2134820FC77880036311D /* PZNavigationController.m */,
+				9DD213C920FF128B0036311D /* PZBaseVieController.h */,
+				9DD213CA20FF128B0036311D /* PZBaseVieController.m */,
+			);
+			path = Custum;
+			sourceTree = "<group>";
+		};
+		9DC1F00F2101723B002C7771 /* BaseGame */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1F0102101723B002C7771 /* Controller */,
+				9DC1F0152101723B002C7771 /* Model */,
+				9DC1F0182101723B002C7771 /* View */,
+			);
+			path = BaseGame;
+			sourceTree = "<group>";
+		};
+		9DC1F0102101723B002C7771 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1F0112101723B002C7771 /* PZPlayViewController.h */,
+				9DC1F0132101723B002C7771 /* PZPlayViewController.m */,
+				9DC1F0122101723B002C7771 /* PZGameViewController.h */,
+				9DC1F0142101723B002C7771 /* PZGameViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9DC1F0152101723B002C7771 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1F0162101723B002C7771 /* PZStageInfo.m */,
+				9DC1F0172101723B002C7771 /* PZStageInfo.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DC1F0182101723B002C7771 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1F0192101723B002C7771 /* PZGameCell.h */,
+				9DC1F01A2101723B002C7771 /* PZGameCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DC1F01F2101725A002C7771 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9DD213C220FEE7610036311D /* PZGameModelController.h */,
+				9DD213C320FEE7610036311D /* PZGameModelController.m */,
+				9DD2133E20FC744C0036311D /* PZSetViewController.h */,
+				9DD2133F20FC744C0036311D /* PZSetViewController.m */,
+				9DD213C620FEE8830036311D /* PZBackTypeVieController.h */,
+				9DD213C720FEE8830036311D /* PZBackTypeVieController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9DC1F0202101725A002C7771 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DC1F0212101725B002C7771 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DD213B920FEDDE40036311D /* PZSetCell.h */,
+				9DD213BA20FEDDE40036311D /* PZSetCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DC1F023210178F8002C7771 /* PZHeader */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1F022210178E1002C7771 /* PZConstantHeader.h */,
+				9DC1F02E21017944002C7771 /* PZCategoryHeader.h */,
+				9DC1F02F21017958002C7771 /* PZPublicHeader.h */,
+			);
+			path = PZHeader;
+			sourceTree = "<group>";
+		};
+		9DC1F02421017933002C7771 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				9DC1F02521017933002C7771 /* UIColor+SMColor.h */,
+				9DC1F02621017933002C7771 /* UIView+PZImage.h */,
+				9DC1F02721017933002C7771 /* UIFont+fonts.h */,
+				9DC1F02821017933002C7771 /* UIView+PZImage.m */,
+				9DC1F02921017933002C7771 /* UIColor+SMColor.m */,
+				9DC1F02A21017933002C7771 /* UIFont+fonts.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		9DD212F420FC38190036311D = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +404,8 @@
 		9DD212FF20FC38190036311D /* PuzGame */ = {
 			isa = PBXGroup;
 			children = (
+				9DC1F00521016F81002C7771 /* LICENSE */,
+				9DC1F00621016F82002C7771 /* README.md */,
 				9DD2133B20FC726C0036311D /* Classess */,
 				9DD2133A20FC72580036311D /* Source */,
 				9DD2130020FC38190036311D /* AppDelegate.h */,
@@ -299,6 +413,7 @@
 				9DD2130920FC381A0036311D /* Assets.xcassets */,
 				9DD2130E20FC381A0036311D /* Info.plist */,
 				9DD2130F20FC381A0036311D /* main.m */,
+				9DC1F00921016F94002C7771 /* PZ-PrefixHeader.pch */,
 			);
 			path = PuzGame;
 			sourceTree = "<group>";
@@ -333,6 +448,7 @@
 		9DD2133B20FC726C0036311D /* Classess */ = {
 			isa = PBXGroup;
 			children = (
+				9DC1F023210178F8002C7771 /* PZHeader */,
 				9DD2135020FC8C4C0036311D /* XWCoachMask */,
 				9DD2133D20FC72CF0036311D /* Main */,
 				9DD2133C20FC72CF0036311D /* Tools */,
@@ -353,19 +469,11 @@
 		9DD2133D20FC72CF0036311D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9DC1F02421017933002C7771 /* category */,
+				9DC1F00F2101723B002C7771 /* BaseGame */,
+				9DC1F00E210171C8002C7771 /* Custum */,
 				9DD213CD20FF13B80036311D /* Other */,
-				9DD213CC20FF13A20036311D /* catrogy */,
 				9DD213C520FEE7B40036311D /* PZSet */,
-				9DD2134120FC75CF0036311D /* PZGameViewController.h */,
-				9DD2134220FC75CF0036311D /* PZGameViewController.m */,
-				9DD2134420FC767C0036311D /* PZLanchViewController.h */,
-				9DD2134520FC767C0036311D /* PZLanchViewController.m */,
-				9DD2134720FC77880036311D /* PZNavigationController.h */,
-				9DD2134820FC77880036311D /* PZNavigationController.m */,
-				9DD2134D20FC8B8E0036311D /* PZPlayViewController.h */,
-				9DD2134E20FC8B8E0036311D /* PZPlayViewController.m */,
-				9DD213C920FF128B0036311D /* PZBaseVieController.h */,
-				9DD213CA20FF128B0036311D /* PZBaseVieController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -424,27 +532,11 @@
 		9DD213C520FEE7B40036311D /* PZSet */ = {
 			isa = PBXGroup;
 			children = (
-				9DD213B920FEDDE40036311D /* PZSetCell.h */,
-				9DD213BA20FEDDE40036311D /* PZSetCell.m */,
-				9DD213C220FEE7610036311D /* PZGameModelController.h */,
-				9DD213C320FEE7610036311D /* PZGameModelController.m */,
-				9DD2133E20FC744C0036311D /* PZSetViewController.h */,
-				9DD2133F20FC744C0036311D /* PZSetViewController.m */,
-				9DD213C620FEE8830036311D /* PZBackTypeVieController.h */,
-				9DD213C720FEE8830036311D /* PZBackTypeVieController.m */,
+				9DC1F01F2101725A002C7771 /* Controller */,
+				9DC1F0202101725A002C7771 /* Model */,
+				9DC1F0212101725B002C7771 /* View */,
 			);
 			path = PZSet;
-			sourceTree = "<group>";
-		};
-		9DD213CC20FF13A20036311D /* catrogy */ = {
-			isa = PBXGroup;
-			children = (
-				9DD213BF20FEDF570036311D /* UIColor+SMColor.h */,
-				9DD213C020FEDF570036311D /* UIColor+SMColor.m */,
-				9DD213BC20FEDF270036311D /* UIFont+fonts.h */,
-				9DD213BD20FEDF280036311D /* UIFont+fonts.m */,
-			);
-			path = catrogy;
 			sourceTree = "<group>";
 		};
 		9DD213CD20FF13B80036311D /* Other */ = {
@@ -452,18 +544,12 @@
 			children = (
 				9DD213D120FF21CA0036311D /* SMAuotherAction.h */,
 				9DD213D220FF21CB0036311D /* SMAuotherAction.m */,
-				9DD2134A20FC81620036311D /* PZGameCell.h */,
-				9DD2134B20FC81620036311D /* PZGameCell.m */,
-				9DD2139020FD7AC40036311D /* PZStageInfo.h */,
-				9DD2139120FD7AC40036311D /* PZStageInfo.m */,
 				9DD213B320FDD3B30036311D /* PZStageManager.h */,
 				9DD213B420FDD3B30036311D /* PZStageManager.m */,
 				9DD213CE20FF201C0036311D /* PZSnowAction.h */,
 				9DD213CF20FF201C0036311D /* PZSnowAction.m */,
 				9DC1EFF421001CAC002C7771 /* PZFullBackGroundView.h */,
 				9DC1EFF521001CAC002C7771 /* PZFullBackGroundView.m */,
-				9DC1EFF821001CC8002C7771 /* UIView+PZImage.h */,
-				9DC1EFF921001CC8002C7771 /* UIView+PZImage.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -663,6 +749,7 @@
 				9DC1EFFD210059F3002C7771 /* bg_music.mp3 in Resources */,
 				9DD2136620FC8C4C0036311D /* arrow-right@2x.png in Resources */,
 				9DD2136F20FC8C4C0036311D /* arrow-left@3x.png in Resources */,
+				9DC1F00821016F82002C7771 /* README.md in Resources */,
 				9DD2136C20FC8C4C0036311D /* arrow-down@2x.png in Resources */,
 				9DD2136820FC8C4C0036311D /* arrow-down.png in Resources */,
 				9DD2136B20FC8C4C0036311D /* arrow-top@2x.png in Resources */,
@@ -671,6 +758,7 @@
 				9DD2130A20FC381A0036311D /* Assets.xcassets in Resources */,
 				9DD2133820FC44280036311D /* sound.bundle in Resources */,
 				9DD2136E20FC8C4C0036311D /* arrow-top@3x.png in Resources */,
+				9DC1F00721016F82002C7771 /* LICENSE in Resources */,
 				9DC1EFEC20FF406D002C7771 /* images.xcassets in Resources */,
 				9DC1EFDA20FF3C9A002C7771 /* Images.xcassets in Resources */,
 				9DD2136D20FC8C4C0036311D /* arrow-down@3x.png in Resources */,
@@ -776,29 +864,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DD2134320FC75CF0036311D /* PZGameViewController.m in Sources */,
 				9DD213B520FDD3B30036311D /* PZStageManager.m in Sources */,
 				9DD2134920FC77880036311D /* PZNavigationController.m in Sources */,
-				9DD213C120FEDF570036311D /* UIColor+SMColor.m in Sources */,
 				9DD213D020FF201C0036311D /* PZSnowAction.m in Sources */,
 				9DD2134020FC744C0036311D /* PZSetViewController.m in Sources */,
 				9DD213BB20FEDDE40036311D /* PZSetCell.m in Sources */,
 				9DD2133420FC387F0036311D /* PZSoundToolManger.m in Sources */,
+				9DC1F02D21017934002C7771 /* UIFont+fonts.m in Sources */,
+				9DC1F02B21017934002C7771 /* UIView+PZImage.m in Sources */,
 				9DD2134620FC767C0036311D /* PZLanchViewController.m in Sources */,
-				9DD2134F20FC8B8E0036311D /* PZPlayViewController.m in Sources */,
 				9DD213CB20FF128B0036311D /* PZBaseVieController.m in Sources */,
 				9DD213C820FEE8830036311D /* PZBackTypeVieController.m in Sources */,
-				9DD213BE20FEDF280036311D /* UIFont+fonts.m in Sources */,
 				9DC1EFF621001CAC002C7771 /* PZFullBackGroundView.m in Sources */,
-				9DD2139220FD7AC40036311D /* PZStageInfo.m in Sources */,
-				9DC1EFFA21001CC8002C7771 /* UIView+PZImage.m in Sources */,
+				9DC1F02C21017934002C7771 /* UIColor+SMColor.m in Sources */,
 				9DD2136220FC8C4C0036311D /* XWMaskItem.m in Sources */,
 				9DD213C420FEE7610036311D /* PZGameModelController.m in Sources */,
+				9DC1F01E2101723B002C7771 /* PZGameCell.m in Sources */,
+				9DC1F01C2101723B002C7771 /* PZGameViewController.m in Sources */,
 				9DD213D320FF21CB0036311D /* SMAuotherAction.m in Sources */,
+				9DC1F01B2101723B002C7771 /* PZPlayViewController.m in Sources */,
 				9DD2131020FC381A0036311D /* main.m in Sources */,
 				9DD2136320FC8C4C0036311D /* XWCoachMask.m in Sources */,
+				9DC1F01D2101723B002C7771 /* PZStageInfo.m in Sources */,
 				9DD2130220FC38190036311D /* AppDelegate.m in Sources */,
-				9DD2134C20FC81620036311D /* PZGameCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1025,6 +1113,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PuzGame/PZ-PrefixHeader.pch";
 				INFOPLIST_FILE = PuzGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1043,6 +1132,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2H7EQHCHQ7;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PuzGame/PZ-PrefixHeader.pch";
 				INFOPLIST_FILE = PuzGame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

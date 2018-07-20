@@ -11,14 +11,11 @@
 #import "PZPlayViewController.h"
 #import "XWMaskItem.h"
 #import "PZSoundToolManger.h"
-#import <AVFoundation/AVFoundation.h>
 #import "PZSnowAction.h"
 #import "SMAuotherAction.h"
-#import <Masonry.h>
 #import "UIColor+SMColor.h"
-#import <SDTheme.h>
-#define PZ_WIDTH [UIScreen mainScreen].bounds.size.width
-#define PZ_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
 
 
 #define kPzSpace 2
