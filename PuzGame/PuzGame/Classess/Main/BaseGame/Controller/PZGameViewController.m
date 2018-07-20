@@ -56,12 +56,58 @@ static NSString *FooterView = @"FooterView";
         [collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:FooterView];
         [collectionView setValue:self forKey:@"delegate"];
         [collectionView setValue:self forKey:@"dataSource"];
+        UILongPressGestureRecognizer *lonpress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(lonprogress:)];
+        lonpress.minimumPressDuration = 1.5;
+        [collectionView addGestureRecognizer:lonpress];
         _collectionView = collectionView;
         [self.view addSubview:collectionView];
     }
     return _collectionView;
 }
+- (void)lonprogress:(UILongPressGestureRecognizer *)recognizer{
+    CGPoint touchPoint = [recognizer locationInView:self.collectionView];
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        NSIndexPath *indepath = [self.collectionView indexPathForItemAtPoint:touchPoint];
+        if (indepath) {
+      
+            
+            PZGameCell *cell = (PZGameCell *)[self.collectionView cellForItemAtIndexPath:indepath];
+            cell.deleBtn.hidden = NO;
+            CAAnimationGroup *groupAnimation = [CAAnimationGroup animation];
 
+            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+            animation.removedOnCompletion = NO;
+            animation.fillMode = kCAFillModeForwards;
+            animation.fromValue = [NSNumber numberWithDouble:0.f];
+            animation.toValue = [NSNumber numberWithDouble:1.f];
+            animation.duration = 1.0;
+            [cell.deleBtn.layer addAnimation:animation forKey:nil];
+
+            __weak __typeof(cell)weakCell = cell;
+            cell.gameCellCallBack = ^(PZGameCell *gameCell) {
+
+                if (![gameCell.info.tips isEqualToString:@"file"]){
+                    [[PZAlertManager shareManager] alertWithTitle:@"不能删除系统内置图片" message:nil actionTitle:@"确定" inControl:self action:^{
+                         weakCell.deleBtn.hidden = YES;
+                    }];
+                }else{
+                    NSMutableArray *replaceArray = self.titleArray[indepath.section];
+                    [replaceArray removeObjectAtIndex:indepath.row];
+                    [self.titleArray replaceObjectAtIndex:indepath.section withObject:replaceArray];
+                    [self.collectionView reloadData];
+                }
+            };
+        }else{
+            NSLog(@"空白区域");
+        }
+    }
+    if (recognizer.state == UIGestureRecognizerStateChanged) {
+        NSLog(@"UIGestureRecognizerStateChanged");
+    }
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"UIGestureRecognizerStateEnded");
+    }
+}
 -(void)pzSetButtonAction{
     PZSetViewController *setView = [[PZSetViewController alloc] init];
     [self.navigationController pushViewController:setView animated:YES];
@@ -147,6 +193,7 @@ static NSString *FooterView = @"FooterView";
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     PZGameCell *pzcell = [collectionView dequeueReusableCellWithReuseIdentifier:pzgameCell forIndexPath:indexPath];
+    pzcell.deleBtn.hidden = YES;
     pzcell.info =  _titleArray[indexPath.section][indexPath.row];
     return pzcell;
 }

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class PZStageInfo;
+@class PZStageInfo,PZGameCell;
 @interface PZGameCell : UICollectionViewCell
 @property (nonatomic,strong) PZStageInfo *info;
 @property (nonatomic,strong) NSDictionary *dict;
+@property (nonatomic,strong) UIButton *deleBtn;
+@property (nonatomic,copy) void (^gameCellCallBack)(PZGameCell *gameCell);
 @end
