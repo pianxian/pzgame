@@ -9,5 +9,6 @@
 #ifndef PZCategoryHeader_h
 #define PZCategoryHeader_h
 #import "PZAlertManager.h"
+#import "PZAnimate.h"
 
 #endif /* PZCategoryHeader_h */

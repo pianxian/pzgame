@@ -14,7 +14,7 @@
 #import "PZSnowAction.h"
 #import "SMAuotherAction.h"
 #import "UIColor+SMColor.h"
-
+#import "PZRefImgView.h"
 
 
 
@@ -39,11 +39,12 @@
 @property (nonatomic,strong) UILabel *bestRecordLabel;
 @property (nonatomic,strong) UIButton *hintButton;
 
-
+@property (nonatomic,copy) void(^animateBlock)(void);
 @property (nonatomic,strong) NSMutableArray *randNums;//存储初始化Nums
 @property (nonatomic,strong) UIView *puzzleBgView;
 //@property (nonatomic,strong) UIImage *puzzlebgImg;//背景图
 @property (nonatomic,strong) NSMutableArray *puzzleImgArr;//分割img
+@property (nonatomic,strong) PZRefImgView *refImgV;
 @end
 
 @implementation PZPlayViewController
@@ -70,9 +71,6 @@
 }
 - (void)intilizaData{
     _bestRecord = [[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"%@%@",kPzBestRecordKey,self.pzImageName]];
-    if (_bestRecord != INT_MAX) {
-        self.bestRecordLabel.text = [NSString stringWithFormat:@"你的最佳记录:%ld步",(long)_bestRecord];
-    }
     _stepCount = 0;
     _sound = 1104;
     _puzzleCount = _difficulty *_difficulty;
@@ -97,6 +95,8 @@
     CGFloat pzBgViewH = pzBgViewW;
     
     _referImagV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, pzBgViewW /5, pzBgViewH/5)];
+    [_referImagV addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(refImgTap:)]];
+    _referImagV.userInteractionEnabled = YES;
     _referImagV.contentMode = UIViewContentModeScaleAspectFill;
     CGPoint center = _referImagV.center;
     center.x =  PZ_WIDTH/2;
@@ -108,13 +108,19 @@
     _puzzleBgView.backgroundColor = [UIColor colorWithHexColorString:@"#999999" andAlpha:1.0];
     [self.view addSubview:_puzzleBgView];
     
+    _refImgV = [[PZRefImgView alloc] initWithFrame:self.view.frame refImgFrame:_puzzleBgView.frame RefImg:self.puzzlebgImg];
+    
+    
     _stepLabel  = [[UILabel alloc] init];
     _stepLabel.theme_textColor = @"text_h1";
     _stepLabel.font = [UIFont systemFontOfSize:12];
     [self.view addSubview:_stepLabel];
     _bestRecordLabel = [[UILabel alloc] init];
     _bestRecordLabel.textColor = [UIColor colorWithHexColorString:@"#FF0000" andAlpha:1.0];
-    _bestRecordLabel.text = @"你的最佳记录：∞";
+    _bestRecordLabel.text = @"你的最佳记录:∞";
+    if (_bestRecord != INT_MAX && _bestRecord) {
+        self.bestRecordLabel.text = [NSString stringWithFormat:@"你的最佳记录:%ld步",(long)_bestRecord];
+    }
     _bestRecordLabel.font = [UIFont systemFontOfSize:12];
     [self.view addSubview:_bestRecordLabel];
     
@@ -267,8 +273,9 @@
         NSLog(@"挑战成功");
         [[NSUserDefaults standardUserDefaults] setInteger:_stepCount forKey:[NSString stringWithFormat:@"%@%@",kPzBestRecordKey,self.pzImageName]];
         [[NSUserDefaults standardUserDefaults] synchronize];
+         self.bestRecordLabel.text = [NSString stringWithFormat:@"你的最佳记录:%ld步",(long)_stepCount];
         [self.view.layer addSublayer:flakeLayer];
-        [[PZAlertManager shareManager] alertWithTitle:@"恭喜你过关啦" message:@"" actionTitle:@"" inControl:self action:^{
+        [[PZAlertManager shareManager] alertWithTitle:@"恭喜你过关啦" message:@"" actionTitle:@"确定" inControl:self action:^{
             
         }];
         
@@ -321,8 +328,11 @@
     
     if (_showTip) {
         [sender setTitle:@"关闭提示" forState:UIControlStateNormal];
+        [self.view addSubview:self.refImgV];
+      
     } else {
         [sender setTitle:@"显示提示" forState:UIControlStateNormal];
+         [self.refImgV removeFromSuperview];
     }
     
     int i = 0;
@@ -410,5 +420,19 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
 }
+- (void)refImgTap:(UITapGestureRecognizer *)recognizer{
+    
+    
 
+//    UIImageView *refImgV = [[UIImageView alloc] initWithFrame:self.view.frame];
+//    refImgV.image = self.puzzlebgImg;
+//    [PZAnimate animateAcion:^(PZAnimate *base) {
+//        base.showAction();
+//        base.hideWhenTap = YES;
+//    } animationView:imgV];
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//
+//    });
+}
 @end

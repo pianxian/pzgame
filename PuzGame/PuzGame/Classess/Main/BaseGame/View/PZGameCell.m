@@ -33,13 +33,14 @@
     _deleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _deleBtn.hidden = YES;
     _deleBtn.alpha = 0;
-    _deleBtn.layer.cornerRadius = 18;
+    _deleBtn.layer.cornerRadius = 12.5;
     _deleBtn.clipsToBounds = YES;
     [_deleBtn setBackgroundImage:[UIImage imageNamed:@"delebtn"] forState:UIControlStateNormal];
     [self addSubview:_deleBtn];
     [_deleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(@-2);
         make.top.equalTo(@2);
+        make.width.height.mas_equalTo(@25);
     }];
     [_deleBtn addTarget:self action:@selector(deleBtnAction:) forControlEvents:UIControlEventTouchUpInside];
 }
