@@ -8,6 +8,13 @@
 
 #ifndef PZConstantHeader_h
 #define PZConstantHeader_h
+typedef NS_ENUM(NSInteger,PZGameModel){
+    PZGameModelDefult = 0,
+    PZGameModelScrol = 1
+};
+
+
+
 #define IOS_VERSION            [[[UIDevice currentDevice] systemVersion] floatValue]
 
 #define SMCOLOR(r,g,b,a) (IOS_VERSION >=10.0f ? [UIColor colorWithDisplayP3Red:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)] : [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)])

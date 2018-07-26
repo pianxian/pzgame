@@ -10,5 +10,6 @@
 
 @interface PZAlertManager : NSObject
 +(instancetype)shareManager;
--(void)alertWithTitle:(NSString *)title message:(NSString *)message actionTitle:(NSString *)actionTitle inControl:(UIViewController *)controller action:(void (^)(void))handler;
+-(void)alertWithAlertControllerStyle:(UIAlertControllerStyle)style Title:(NSString *)title message:(NSString *)message actionTitle:(NSString *)actionTitle inControl:(UIViewController *)controller action:(void (^)(void))handler;
+-(void)alertWithStyle:(UIAlertControllerStyle)style actions:(nullable NSArray *)actions title:(NSString *)title message:(NSString *)message inContrl:(UIViewController *)controller action:(void(^)(NSInteger tag))handler;
 @end

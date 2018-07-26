@@ -27,6 +27,7 @@
     NSMutableArray *_stageInfos;
     int _diffculty;
     NSInteger _imgCount;
+    PZGameModel _gamaModel;
 }
 @property (nonatomic,strong) NSMutableArray *titleArray;
 @property (nonatomic,strong) UICollectionView *collectionView;
@@ -92,7 +93,7 @@ static NSString *FooterView = @"FooterView";
             cell.gameCellCallBack = ^(PZGameCell *gameCell) {
 
                 if (![gameCell.info.tips isEqualToString:@"file"]){
-                    [[PZAlertManager shareManager] alertWithTitle:@"不能删除系统内置图片" message:nil actionTitle:@"确定" inControl:self action:^{
+                    [[PZAlertManager shareManager] alertWithAlertControllerStyle:UIAlertControllerStyleAlert Title:@"不能删除系统内置图片" message:nil actionTitle:@"确定" inControl:self action:^{
                          weakCell.deleBtn.hidden = YES;
                     }];
                 }else{
@@ -125,11 +126,16 @@ static NSString *FooterView = @"FooterView";
     [self setUI];
     self.title = @"关卡选择";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeModel:) name:@"changeModel" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pzgameModelChange:) name:@"pzgameModelChange" object:nil];
+//    pzgameModelModel
     if (@available(iOS 11.0,*)) {
         self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }else{
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
+}
+-(void)pzgameModelChange:(NSNotification *)notification{
+    _gamaModel = [notification.userInfo[@"pzgameModel"] integerValue];
 }
 -(void)setUI{
     UIButton *pzSetButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -141,6 +147,7 @@ static NSString *FooterView = @"FooterView";
 - (void)intiliziaData{
     _imgCount = 0;
     _diffculty = 3;
+    _gamaModel = [[NSUserDefaults standardUserDefaults] integerForKey:@"pzgameModel"];
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"imgCount"]) {
         _imgCount = [[NSUserDefaults standardUserDefaults] integerForKey:@"imgCount"];
     }
@@ -231,6 +238,7 @@ static NSString *FooterView = @"FooterView";
     playView.pzImageName = info.imgName;
     playView.puzzlebgImg = img;
     playView.difficulty = _diffculty;
+    playView.gameModel = _gamaModel;
     [self.navigationController pushViewController:playView animated:YES];
 }
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
@@ -282,7 +290,7 @@ static NSString *FooterView = @"FooterView";
                     }];
                 }
             }else{
-                [[PZAlertManager shareManager] alertWithTitle:@"设备不支持相机" message:nil actionTitle:@"确定" inControl:self action:^{
+                [[PZAlertManager shareManager] alertWithAlertControllerStyle:UIAlertControllerStyleAlert Title:@"设备不支持相机" message:nil actionTitle:@"确定" inControl:self action:^{
                     
                 }];
             }
@@ -309,7 +317,7 @@ static NSString *FooterView = @"FooterView";
                     [self presentToCamera:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
                 }
             }else{
-                [[PZAlertManager shareManager] alertWithTitle:@"此设备不支持照片图库" message:nil actionTitle:@"确定" inControl:self action:^{
+                [[PZAlertManager shareManager] alertWithAlertControllerStyle:UIAlertControllerStyleAlert Title:@"此设备不支持照片图库" message:nil actionTitle:@"确定" inControl:self action:^{
                     
                 }];
             }
@@ -320,7 +328,7 @@ static NSString *FooterView = @"FooterView";
 }
 - (void)AlbumDeniedTosetWithTitle:(NSString *)title{
     
-    [[PZAlertManager shareManager] alertWithTitle:[NSString stringWithFormat:@"您未允许Easy拼图访问您的%@",title] message:@"是否去设置？" actionTitle:@"去设置" inControl:self action:^{
+    [[PZAlertManager shareManager] alertWithAlertControllerStyle:UIAlertControllerStyleAlert Title:[NSString stringWithFormat:@"您未允许Easy拼图访问您的%@",title] message:@"是否去设置？" actionTitle:@"去设置" inControl:self action:^{
         if( [[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]] ) {
             if (@available(iOS 10.0, *)) {
                 [[UIApplication sharedApplication]openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{}completionHandler:^(BOOL        success) {
@@ -390,14 +398,10 @@ static NSString *FooterView = @"FooterView";
     [alert addAction:[UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [weakSelf selectImageWithSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     }]];
-
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
     [self presentViewController:alert animated:YES completion:nil];
-    
 }
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
-}
 
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];

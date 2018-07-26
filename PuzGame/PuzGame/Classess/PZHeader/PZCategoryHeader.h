@@ -10,5 +10,6 @@
 #define PZCategoryHeader_h
 #import "PZAlertManager.h"
 #import "PZAnimate.h"
-
+#import "UIFont+fonts.h"
+#import "UIColor+SMColor.h"
 #endif /* PZCategoryHeader_h */

@@ -21,6 +21,11 @@
 #define kPzSpace 2
 #define kTipLabTag 10000
 #define kPzBestRecordKey @"bestRecord"
+#define kPzBgViewX 25
+#define KpzBgViewY 200
+#define kPzBgViewW (PZ_WIDTH - 50)
+#define kPzBgViewH (PZ_WIDTH - 50)
+
 
 @interface PZPlayViewController ()
 {
@@ -32,6 +37,7 @@
     NSString *_addArrStr;
     int _stepCount;
     NSInteger _bestRecord;
+    CGFloat _orginalY;
 }
 @property (nonatomic,strong) UIImageView *referImagV;
 @property (nonatomic,strong) UILabel *timeLabel;
@@ -45,6 +51,7 @@
 //@property (nonatomic,strong) UIImage *puzzlebgImg;//背景图
 @property (nonatomic,strong) NSMutableArray *puzzleImgArr;//分割img
 @property (nonatomic,strong) PZRefImgView *refImgV;
+
 @end
 
 @implementation PZPlayViewController
@@ -67,7 +74,13 @@
     [self cutPuzzleImg:[self checkWithImg:self.puzzlebgImg]];
     self.randNums = nil;
     [self.randNums addObjectsFromArray:[self getRandNums]];
-    [self creatUI];
+    [self creatUiWithGameModel:self.gameModel];
+//    NSLog(@"---gameModel:%ld",_gameModel);
+    if (_gameModel == PZGameModelDefult) {
+        NSLog(@"经典");
+    }else{
+        NSLog(@"滑动");
+    }
 }
 - (void)intilizaData{
     _bestRecord = [[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:@"%@%@",kPzBestRecordKey,self.pzImageName]];
@@ -75,8 +88,9 @@
     _sound = 1104;
     _puzzleCount = _difficulty *_difficulty;
     _showBgImg = YES;
+    _orginalY = 0;
 }
--(void)creatUI{
+-(void)creatUiWithGameModel:(PZGameModel)gameModel{
     flakeLayer = [PZSnowAction snowShowWithlayerSize:CGSizeMake(self.view.bounds.size.width * 2.0, 0.0)];
     
     UIButton *restBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -89,12 +103,9 @@
     // 设置导航条的按钮
     self.navigationItem.rightBarButtonItem = leftBarbutton;
     [_puzzleBgView removeFromSuperview];
-    CGFloat pzBgViewX = 25;
-    CGFloat pzBgViewY = 200;
-    CGFloat pzBgViewW = PZ_WIDTH - 50;
-    CGFloat pzBgViewH = pzBgViewW;
+
     
-    _referImagV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, pzBgViewW /5, pzBgViewH/5)];
+    _referImagV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kPzBgViewW /5, kPzBgViewH/5)];
     [_referImagV addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(refImgTap:)]];
     _referImagV.userInteractionEnabled = YES;
     _referImagV.contentMode = UIViewContentModeScaleAspectFill;
@@ -104,12 +115,12 @@
     _referImagV.center = center;
     _referImagV.image = [self checkWithImg:self.puzzlebgImg];
     [self.view addSubview:_referImagV];
-    _puzzleBgView = [[UIView alloc] initWithFrame:CGRectMake(pzBgViewX, pzBgViewY, pzBgViewW, pzBgViewH)];
-    _puzzleBgView.backgroundColor = [UIColor colorWithHexColorString:@"#999999" andAlpha:1.0];
-    [self.view addSubview:_puzzleBgView];
+    
+    
+    [self setDefultBgView];
+    
     
     _refImgV = [[PZRefImgView alloc] initWithFrame:self.view.frame refImgFrame:_puzzleBgView.frame RefImg:self.puzzlebgImg];
-    
     
     _stepLabel  = [[UILabel alloc] init];
     _stepLabel.theme_textColor = @"text_h1";
@@ -136,7 +147,7 @@
     
     CGFloat pzBtnX = 0;
     CGFloat pzBtnY = 0;
-    CGFloat pzBtnW = pzBgViewW / _difficulty -kPzSpace *2;
+    CGFloat pzBtnW = kPzBgViewW / _difficulty -kPzSpace *2;
     CGFloat pzBtnH = pzBtnW;
     
     for (int i = 0; i <_puzzleCount; i ++) {
@@ -150,8 +161,31 @@
         
         int pzValue = [self.randNums[i] intValue];
         if (pzValue == _puzzleCount -1) {
-            pzBtn.backgroundColor = [UIColor clearColor];
-            _maxPzBtn = pzBtn;
+            if (!gameModel) {
+                pzBtn.backgroundColor = [UIColor clearColor];
+                _maxPzBtn = pzBtn;
+            }else{
+                CGFloat tipLbW = 15;
+                CGFloat tipLbH = tipLbW;
+                CGFloat tipLbX = pzBtnW - tipLbW;
+                CGFloat tipLbY = pzBtnH - tipLbH;
+                
+                UILabel *tipLb = [[UILabel alloc] initWithFrame:CGRectMake(tipLbX, tipLbY, tipLbW, tipLbH)];
+                tipLb.tag = i + kTipLabTag;
+                tipLb.layer.cornerRadius = tipLbW * 0.5;
+                tipLb.layer.masksToBounds = YES;
+                tipLb.text = [NSString stringWithFormat:@"%d", pzValue + 1];
+                tipLb.font = [UIFont systemFontOfSize:8];
+                tipLb.alpha = 0.6;
+                tipLb.hidden = YES;
+                tipLb.textAlignment = NSTextAlignmentCenter;
+                tipLb.backgroundColor = [UIColor whiteColor];
+                [pzBtn addSubview:tipLb];
+                
+                [pzBtn setBackgroundImage:self.puzzleImgArr[pzValue] forState:UIControlStateNormal];
+                [pzBtn setBackgroundImage:self.puzzleImgArr[pzValue] forState:UIControlStateHighlighted];
+            }
+      
         }else{
             if (_showBgImg) {
                 [pzBtn setBackgroundImage:self.puzzleImgArr[pzValue] forState:UIControlStateNormal];
@@ -177,7 +211,9 @@
                 [pzBtn setTitle:[NSString stringWithFormat:@"%d", pzValue + 1] forState:UIControlStateNormal];
                 pzBtn.backgroundColor = [UIColor colorWithRed:0x4A / 255.0 green:0xC2 / 255.0 blue:0xFB / 255.0 alpha:1];
             }
-              [pzBtn addTarget:self action:@selector(pzBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+            if (!gameModel) {
+                [pzBtn addTarget:self action:@selector(pzBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+            }
         }
     }
     _hintButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -190,6 +226,35 @@
         make.top.equalTo(self->_puzzleBgView.mas_bottom).offset(20);
         make.centerX.equalTo(@0);
     }];
+}
+-(void)setDefultBgView{
+    _puzzleBgView = [[UIView alloc] initWithFrame:CGRectMake(kPzBgViewX, KpzBgViewY, kPzBgViewW, kPzBgViewH)];
+    _puzzleBgView.backgroundColor = [UIColor colorWithHexColorString:@"#999999" andAlpha:1.0];
+    if (self.gameModel) {
+        [_puzzleBgView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)]];
+    }
+    [self.view addSubview:_puzzleBgView];
+}
+-(void)pan:(UIPanGestureRecognizer *)recognizer{
+    CGPoint panPoint = [recognizer locationInView:self.puzzleBgView];
+//    NSLog(@"---panPoint:%@----%d----%d",NSStringFromCGPoint(panPoint),(int)(panPoint.x / kPzBgViewW *3),(int)(panPoint.y / kPzBgViewW *3));
+//    if (<#condition#>) {
+//        <#statements#>
+//    }
+    int row = (int)(panPoint.y / kPzBgViewW *3);//行
+    int colm = (int)(panPoint.x / kPzBgViewW *3);//列
+    int btnIndex = row *3 + colm;
+    //上下移动
+    int firstIndex = row *3;
+    int lastIndex = row * 3 +2;
+    NSLog(@"---交换前:%@",self.randNums);
+    [self.randNums exchangeObjectAtIndex:firstIndex withObjectAtIndex:lastIndex];
+
+    NSLog(@"---交换后:%@",self.randNums);
+    NSArray *indexArray = @[self.randNums[row *3],self.randNums[row *3 +1],self.randNums[row *3 +2]];
+//    NSLog(@"---indexarray:%@",indexArray);
+//    NSLog(@"---ranindex:%d",[self.randNums[btnIndex] intValue]);
+//    NSLog(@"---btnIndex:%d",btnIndex);
 }
 - (void)pzBtnAction:(UIButton *)pzBtn{
     NSInteger index = pzBtn.tag;
@@ -275,7 +340,7 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
          self.bestRecordLabel.text = [NSString stringWithFormat:@"你的最佳记录:%ld步",(long)_stepCount];
         [self.view.layer addSublayer:flakeLayer];
-        [[PZAlertManager shareManager] alertWithTitle:@"恭喜你过关啦" message:@"" actionTitle:@"确定" inControl:self action:^{
+        [[PZAlertManager shareManager] alertWithAlertControllerStyle:UIAlertControllerStyleAlert Title:@"恭喜你过关啦" message:@"" actionTitle:@"确定" inControl:self action:^{
             
         }];
         
@@ -356,7 +421,7 @@
     }
     self.randNums = nil;
     [self.randNums addObjectsFromArray:[self getRandNums]];
-    [self creatUI];
+    [self creatUiWithGameModel:self.gameModel];
 }
 #pragma mark - Other
 - (void)cutPuzzleImg:(UIImage *)img {

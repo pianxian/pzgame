@@ -11,6 +11,7 @@
 		9D0E7F7D2105CFF8008CE5B8 /* STModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E7F7B2105CFF7008CE5B8 /* STModal.m */; };
 		9D0E7F862106BA9A008CE5B8 /* PZAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E7F852106BA9A008CE5B8 /* PZAnimate.m */; };
 		9D0E7F892106D7C6008CE5B8 /* PZRefImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E7F882106D7C6008CE5B8 /* PZRefImgView.m */; };
+		9D0E7F8C210865FA008CE5B8 /* PZGameHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E7F8B210865FA008CE5B8 /* PZGameHandle.m */; };
 		9DC1EFDA20FF3C9A002C7771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFD920FF3C9A002C7771 /* Images.xcassets */; };
 		9DC1EFDB20FF3C9A002C7771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFD920FF3C9A002C7771 /* Images.xcassets */; };
 		9DC1EFDD20FF3CA4002C7771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFDC20FF3CA4002C7771 /* Images.xcassets */; };
@@ -123,6 +124,8 @@
 		9D0E7F852106BA9A008CE5B8 /* PZAnimate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZAnimate.m; sourceTree = "<group>"; };
 		9D0E7F872106D7C6008CE5B8 /* PZRefImgView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZRefImgView.h; sourceTree = "<group>"; };
 		9D0E7F882106D7C6008CE5B8 /* PZRefImgView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZRefImgView.m; sourceTree = "<group>"; };
+		9D0E7F8A210865FA008CE5B8 /* PZGameHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZGameHandle.h; sourceTree = "<group>"; };
+		9D0E7F8B210865FA008CE5B8 /* PZGameHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZGameHandle.m; sourceTree = "<group>"; };
 		9DC1EFD920FF3C9A002C7771 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9DC1EFDC20FF3CA4002C7771 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9DC1EFE320FF402D002C7771 /* PZGreen.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PZGreen.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +352,8 @@
 			children = (
 				9DC1F0162101723B002C7771 /* PZStageInfo.m */,
 				9DC1F0172101723B002C7771 /* PZStageInfo.h */,
+				9D0E7F8A210865FA008CE5B8 /* PZGameHandle.h */,
+				9D0E7F8B210865FA008CE5B8 /* PZGameHandle.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -943,6 +948,7 @@
 				9DC1F02C21017934002C7771 /* UIColor+SMColor.m in Sources */,
 				9DD2136220FC8C4C0036311D /* XWMaskItem.m in Sources */,
 				9DD213C420FEE7610036311D /* PZGameModelController.m in Sources */,
+				9D0E7F8C210865FA008CE5B8 /* PZGameHandle.m in Sources */,
 				9DC1F01E2101723B002C7771 /* PZGameCell.m in Sources */,
 				9DC1F03221017DE0002C7771 /* PZAlertManager.m in Sources */,
 				9DC1F01C2101723B002C7771 /* PZGameViewController.m in Sources */,

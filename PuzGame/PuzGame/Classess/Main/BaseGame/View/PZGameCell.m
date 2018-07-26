@@ -80,7 +80,7 @@
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
         NSString *filePath = [paths.lastObject stringByAppendingPathComponent:dict[@"imgName"]];
         _bgImageView.image = [UIImage imageWithContentsOfFile:filePath];
-        NSLog(@"---filePath%@",filePath);
+//        NSLog(@"---filePath%@",filePath);
     }else{
         _bgImageView.image = [UIImage imageNamed:dict[@"imgName"]];
     }

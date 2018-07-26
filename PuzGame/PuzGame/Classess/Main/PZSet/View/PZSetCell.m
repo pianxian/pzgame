@@ -7,8 +7,7 @@
 //
 
 #import "PZSetCell.h"
-#import "UIFont+fonts.h"
-#import "UIColor+SMColor.h"
+
 
 @interface PZSetCell ()
 //图标

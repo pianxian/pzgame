@@ -13,4 +13,6 @@
 @property (nonatomic,assign) int puzzleCount;
 @property (nonatomic,strong) UIImage *puzzlebgImg;
 @property (nonatomic,copy) NSString *pzImageName;
+@property (nonatomic,assign) PZGameModel gameModel;
+
 @end

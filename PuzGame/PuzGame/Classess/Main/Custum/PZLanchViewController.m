@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightTextColor];
-    NSLog(@"---%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"musicOn"]);
+//    NSLog(@"---%@",[[NSUserDefaults standardUserDefaults] stringForKey:@"musicOn"]);
     if (![[[NSUserDefaults standardUserDefaults] stringForKey:@"musicOn"] isEqualToString:@"noOn"]) {
         
          [[PZSoundToolManger shareSoundToolManager] playBgMusicWithPlayAgain:YES];
