@@ -12,6 +12,8 @@
 		9D0E7F862106BA9A008CE5B8 /* PZAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E7F852106BA9A008CE5B8 /* PZAnimate.m */; };
 		9D0E7F892106D7C6008CE5B8 /* PZRefImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E7F882106D7C6008CE5B8 /* PZRefImgView.m */; };
 		9D0E7F8C210865FA008CE5B8 /* PZGameHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E7F8B210865FA008CE5B8 /* PZGameHandle.m */; };
+		9D9CC8F92115470900E3B430 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9CC8F62115470900E3B430 /* JPEngine.m */; };
+		9D9CC8FA2115470900E3B430 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = 9D9CC8F82115470900E3B430 /* JSPatch.js */; };
 		9DC1EFDA20FF3C9A002C7771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFD920FF3C9A002C7771 /* Images.xcassets */; };
 		9DC1EFDB20FF3C9A002C7771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFD920FF3C9A002C7771 /* Images.xcassets */; };
 		9DC1EFDD20FF3CA4002C7771 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DC1EFDC20FF3CA4002C7771 /* Images.xcassets */; };
@@ -126,6 +128,9 @@
 		9D0E7F882106D7C6008CE5B8 /* PZRefImgView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZRefImgView.m; sourceTree = "<group>"; };
 		9D0E7F8A210865FA008CE5B8 /* PZGameHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZGameHandle.h; sourceTree = "<group>"; };
 		9D0E7F8B210865FA008CE5B8 /* PZGameHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZGameHandle.m; sourceTree = "<group>"; };
+		9D9CC8F62115470900E3B430 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
+		9D9CC8F72115470900E3B430 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
+		9D9CC8F82115470900E3B430 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
 		9DC1EFD920FF3C9A002C7771 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9DC1EFDC20FF3CA4002C7771 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9DC1EFE320FF402D002C7771 /* PZGreen.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PZGreen.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,6 +308,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9D9CC8F52115470900E3B430 /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				9D9CC8F62115470900E3B430 /* JPEngine.m */,
+				9D9CC8F72115470900E3B430 /* JPEngine.h */,
+				9D9CC8F82115470900E3B430 /* JSPatch.js */,
+			);
+			path = JSPatch;
+			sourceTree = "<group>";
+		};
 		9DC1EFE420FF402D002C7771 /* PZGreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +440,7 @@
 		9DC1F03E2101CBEF002C7771 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				9D9CC8F52115470900E3B430 /* JSPatch */,
 			);
 			name = FrameWork;
 			path = PuzGame/FrameWork;
@@ -823,6 +839,7 @@
 				9DD2130A20FC381A0036311D /* Assets.xcassets in Resources */,
 				9DD2136E20FC8C4C0036311D /* arrow-top@3x.png in Resources */,
 				9DC1F00721016F82002C7771 /* LICENSE in Resources */,
+				9D9CC8FA2115470900E3B430 /* JSPatch.js in Resources */,
 				9DC1EFEC20FF406D002C7771 /* images.xcassets in Resources */,
 				9DC1EFDA20FF3C9A002C7771 /* Images.xcassets in Resources */,
 				9DD2136D20FC8C4C0036311D /* arrow-down@3x.png in Resources */,
@@ -940,6 +957,7 @@
 				9DD2133420FC387F0036311D /* PZSoundToolManger.m in Sources */,
 				9DC1F02D21017934002C7771 /* UIFont+fonts.m in Sources */,
 				9DC1F02B21017934002C7771 /* UIView+PZImage.m in Sources */,
+				9D9CC8F92115470900E3B430 /* JPEngine.m in Sources */,
 				9DD2134620FC767C0036311D /* PZLanchViewController.m in Sources */,
 				9DD213CB20FF128B0036311D /* PZBaseVieController.m in Sources */,
 				9DD213C820FEE8830036311D /* PZBackTypeVieController.m in Sources */,

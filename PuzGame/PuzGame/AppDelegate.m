@@ -27,6 +27,7 @@ void UncaughExceptionHandler(NSException *exception){
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSSetUncaughtExceptionHandler(UncaughExceptionHandler);
+//    [self configBugly];
     [MLTransition validatePanBackWithMLTransitionGestureRecognizerType:MLTransitionGestureRecognizerTypePan];
     [[SDThemeManager sharedInstance] setupThemeNameArray:@[@"PZBlack", @"PZWhite",@"PZGreen"]];
     if ([[NSUserDefaults standardUserDefaults] stringForKey:@"backImgTpye"]) {
@@ -50,7 +51,46 @@ void UncaughExceptionHandler(NSException *exception){
     [self.window makeKeyAndVisible];
     return YES;
 }
-
+//-(void)configBugly{
+//    //初始化 Bugly 异常上报
+//    BuglyConfig *config = [[BuglyConfig alloc] init];
+//    config.delegate = self;
+//    config.debugMode = YES;
+//    config.reportLogLevel = BuglyLogLevelInfo;
+//    [Bugly startWithAppId:@"900001055"
+//#if DEBUG
+//        developmentDevice:YES
+//#endif
+//                   config:config];
+//
+//    //捕获 JSPatch 异常并上报
+//    [JPEngine handleException:^(NSString *msg) {
+//        NSException *jspatchException = [NSException exceptionWithName:@"Hotfix Exception" reason:msg userInfo:nil];
+//        [Bugly reportException:jspatchException];
+//    }];
+//    //检测补丁策略
+//    [[BuglyMender sharedMender] checkRemoteConfigWithEventHandler:^(BuglyHotfixEvent event, NSDictionary *patchInfo) {
+//        //有新补丁或本地补丁状态正常
+//        if (event == BuglyHotfixEventPatchValid || event == BuglyHotfixEventNewPatch) {
+//            //获取本地补丁路径
+//            NSString *patchDirectory = [[BuglyMender sharedMender] patchDirectory];
+//            if (patchDirectory) {
+//                //指定执行的 js 脚本文件名
+//                NSString *patchFileName = @"main.js";
+//                NSString *patchFile = [patchDirectory stringByAppendingPathComponent:patchFileName];
+//                //执行补丁加载并上报激活状态
+//                if ([[NSFileManager defaultManager] fileExistsAtPath:patchFile] &&
+//                    [JPEngine evaluateScriptWithPath:patchFile] != nil) {
+//                    NSLog(@"evaluateScript success");
+//                    [[BuglyMender sharedMender] reportPatchStatus:BuglyHotfixPatchStatusActiveSucess];
+//                }else {
+//                    NSLog(@"evaluateScript failed");
+//                    [[BuglyMender sharedMender] reportPatchStatus:BuglyHotfixPatchStatusActiveFail];
+//                }
+//            }
+//        }
+//    }];
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

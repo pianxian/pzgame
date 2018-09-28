@@ -16,5 +16,6 @@
 #import <Bugly/Bugly.h>
 #import <Masonry.h>
 
+#import "JPEngine.h"
 //#import <UMShare/UMSocialManager.h>
 #endif /* PZPublicHeader_h */
